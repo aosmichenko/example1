@@ -1,0 +1,230 @@
+@mixin transition {
+	transition: all 0.2s ease-in;
+}
+
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.osmi-no-gutter {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.osmi-container {
+	padding-left: 50px;
+	padding-right: 50px;
+	@include r($M-) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include r($S-) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+//osmi grid container ALWAYS has
+//to be inside div.osmi-container
+.osmi-grid-container {
+	@include clearfix;
+	padding-left: 225px;
+	padding-right: 225px;
+	@include r(1600) {
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+	@include r(1450) {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+	@include r($L-) {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	@include r($S-) {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	@include r(700) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.osmi-upper {
+	text-transform: uppercase;
+}
+
+//BUTTONs
+
+.osmi-btn {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 340px;
+	height: 104px;
+	width: 34rem;
+	height: 10.4rem;
+	color: $w;
+	cursor: pointer;
+	font-weight: 900;
+	@include fz(16);
+	text-transform: uppercase;
+
+}
+
+.osmi-btn-wrapper {
+	width: 343px;
+	height: 105px;
+	position: relative;
+	background-image: url(../img/Big_button.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include r($M-) {
+		width: 200px;
+		height: 61px;
+		background-image: url(../img/Big_button-mobile.png);
+		span.osmi-btn {
+			font-size: 11px;
+		}
+	}
+	.osmi-btn {
+		width: auto;
+		height: auto;
+		color: $w;
+		cursor: pointer;
+		font-size: 16px;
+		display: inline;
+	}
+	&:hover {
+		@include r($M-) {
+			background-image: url(../img/Big_button_hover-mobile.png);
+
+		}
+		background-image: url(../img/Big_button_hover.png);
+
+	}
+}
+
+#wrapper {
+	@include r(1200) {
+		overflow-x: hidden;
+	}
+	//overflow-x: hidden;
+	.bg-title {
+		z-index: 1;
+		max-width: 100vw;
+		left: 0;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		overflow: visible;
+		background-color: transparent;
+		@include r($M-) {
+
+		}
+
+		div {
+			height: 0;
+			opacity: 0.5;
+			z-index: 1;
+			width: 100%;
+			display: block;
+			@include fz(180);
+			@include r(1650) {
+				@include fz(140);
+			}
+			@include r(1300) {
+				@include fz(120);
+			}
+			font-weight: 800;
+			color: #091326;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+		}
+	}
+
+	.section-title-wrapper {
+		height: 1px;
+		text-align: center;
+		width: 100%;
+		overflow: visible;
+		background-color: transparent;
+		h2 {
+
+		}
+	}
+}
+
+.osmi-cnt-btn {
+	font-size: 13px;
+	color: #dbebff;
+	width: 226px;
+	height: 79px;
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 25px;
+	background-repeat: no-repeat;
+	background-image: url(../img/btn-cnt-new.png);
+	&:hover {
+		background-image: url(../img/btn-cnt-new-h.png);
+	}
+	@include r($S-) {
+		width: 167px;
+		height: 50px;
+		background-image: url(../img/btn-cnt-new-mobile.png);
+		&:hover {
+			background-image: url(../img/btn-cnt-new-mobile.png);
+
+			opacity: 0.7;
+		}
+	}
+}
+
+.preload1 {
+	background-image: url(../img/btn-cnt-new-h.png);
+	position: absolute;
+	top: -99999px;
+}
+
+.preload2 {
+	background-image: url(../img/logo-h.png);
+	position: absolute;
+	top: -99999px;
+
+}
+
+.preload3 {
+	background-image: url(../img/iconXZ-white-h.png);
+	position: absolute;
+	top: -99999px;
+}
+
+.section-line {
+	@include r(1500) {
+		height: 120px;
+		top: -200px;
+	}
+	@include r($M-) {
+		display: none;
+	}
+	background-color: $light-blue;
+	height: 150px;
+	width: 1px;
+	z-index: 3;
+	opacity: 0.4;
+	top: -230px;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}

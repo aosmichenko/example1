@@ -1,0 +1,366 @@
+#header-dashboard {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	.logo-wrap {
+		width: 245px;
+		background: $dash-blue-l;
+		border: none;
+		padding: 18px 15px 15px 70px;
+		text-align: right;
+		h1 {
+			margin: 0;
+			font-size: 24px;
+			line-height: 28px;
+			a {
+				display: block;
+				img {
+					display: inline-block;
+					max-height: 38px;
+					max-width: 140px;
+				}
+			}
+		}
+		@include m($S) {
+			width: 300px;
+			padding: 18px 10px 18px 70px;
+			h1 {
+				a {
+					img {
+						max-width: none;
+						max-height: 40px;
+					}
+				}
+			}
+		}
+		@include m($M) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 18px 10px;
+			text-align: center;
+			width: 225px;
+			border-right: 2px solid $dash-blue-m;
+		}
+		@include m($XL) {
+			width: 275px;
+		}
+	}
+	.header-panel-wrap {
+		background: $dash-blue-l;
+		width: calc(100% - 315px);
+		display: flex;
+		position: relative;
+		.header-panel {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-content: flex-end;
+		}
+		@include m($S) {
+			width: calc(100% - 520px);
+		}
+		@include m($M) {
+			width: calc(100% - 445px);
+			.token-info {
+				display: block;
+				padding: 0 40px 0 20px;
+			}
+		}
+		@include m($L) {
+			width: calc(100% - 465px);
+			padding: 0 20px 0 25px;
+		}
+		@include m(1350) {
+			.token-info {
+				display: block;
+				padding: 0 120px 0 20px;
+			}
+		}
+		@include m($XL) {
+			width: calc(100% - 645px);
+			.token-info {
+				padding: 0 150px 0 40px;
+			}
+		}
+	}
+	.user-profile-wrap {
+		width: 70px;
+		border-left: 2px solid $dash-blue-m;
+		background: $dash-blue-l;
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		.user-foto-wrap {
+			width: 40px;
+			height: 40px;
+			background: #374769 url("../svg/svg-dashboard/single-blue.svg") center no-repeat;
+			background-size: 14px 16px;
+			border: 1px solid $light-blue;
+			flex-shrink: 0;
+		}
+		.user-name {
+			position: relative;
+			padding-right: 25px;
+			display: none;
+			p {
+				@include ff(14,22,400);
+				color: $text;
+				margin: 0 20px 0 12px;
+			}
+			i.fa-angle-down {
+				position: absolute;
+				top: 50%;
+				transform: rotate(0deg) translateY(-50%);
+				right: 5px;
+				font-size: 25px;
+				line-height: 25px;
+				color: $text;
+				@include tr();
+				transform-origin: 50% 0;
+				&.rotate-up {
+					transform: rotate(-180deg) translateY(-50%);
+				}
+			}
+		}
+		@include m($S) {
+			width: 220px;
+			padding: 10px;
+			.user-name {
+				display: block;
+				p {
+					margin: 0 5px 0 8px;
+				}
+			}
+		}
+		@include m($M) {
+			padding: 15px;
+		}
+		@include m($L) {
+			width: 240px;
+			padding: 20px;
+		}
+		@include m($XL) {
+			width: 370px;
+			padding: 30px;
+		}
+	}
+}
+
+.menu-gumb-wrap {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	z-index: 999;
+	width: 27px;
+	height: 100%;
+	@include m($S) {
+		left: 30px;
+		width: 36px;
+	}
+	@include m($M) {
+		display: none;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	.menu-gumb {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		height: 19px;
+		span {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: $w;
+			opacity: 1;
+			transform: rotate(0deg);
+			transition: .5s ease-in-out;
+			&:nth-child(1) {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: 8px;
+				left: 0;
+			}
+			&:nth-child(3) {
+				top: 16px;
+			}
+		}
+	}
+	&.open {
+		.menu-gumb {
+			span {
+				&:nth-child(1) {
+					top: 8px;
+					transform: rotate(135deg);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+					left: 15px;
+					@include m($S) {
+						left: 30px;
+					}
+				}
+				&:nth-child(3) {
+					top: 8px;
+					transform: rotate(-135deg);
+				}
+			}
+		}
+	}
+}
+
+.user-dropdown {
+	padding: 11px 0;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	display: none;
+	opacity: 0;
+	top: 100%;
+	right: 15px;
+	border-radius: 2px;
+	background: $dash-bg-pan-h;
+	outline: none;
+	@include tr();
+	border: 1px solid $light-blue;
+	@include m($S) {
+		right: 30px;
+	}
+	@include m($M) {
+		right: 60px;
+	}
+	&.dropdown-open {
+		display: block;
+		opacity: 1;
+		@include tr(.4s .2s);
+	}
+	li {
+		a {
+			display: block;
+			position: relative;
+			width: 100%;
+			font-size: 8px;
+			line-height: 20px;
+			font-weight: 500;
+			color: $text;
+			@include tr();
+			padding: 10px 65px;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 2px rgba(0,0,0,.6);
+			@include m($S) {
+				font-size: 10px;
+			}
+			@include m($M) {
+				font-size: 12px;
+			}
+			&:hover {
+				background: #181f33;
+			}
+			svg {
+				position: absolute;
+				display: block;
+				top: 50%;
+				left: 25px;
+				transform: translateY(-50%);
+				width: 20px;
+				height: 20px;
+				fill: $text;
+				rect {
+					fill: $text !important;
+				}
+				.nc-icon-wrapper {
+					fill: $text !important;
+					path {
+						fill: $text !important;
+					}
+					circle {
+						fill: $text !important;
+					}
+				}
+			}
+			&.logout-nav {
+				svg {
+					left: 29px;
+				}
+			}
+		}
+	}
+}
+
+.token-info {
+	display: none;
+	border-right: 1px solid $dash-blue-m;
+	&.token-balance-container {
+		border: none;
+	}
+	p {
+		@include ff(13,21,400);
+		color: $text;
+		.value-reward {
+			@include ff(24,32,400);
+			color: $light-blue;
+		}
+		.unit {
+			@include ff(18,26,400);
+			color: $w;
+		}
+	}
+}
+
+.token-info-mobile-wrap {
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto 30px;
+	.token-info {
+		width: 50%;
+		display: block;
+		border: none;
+		text-align: center;
+		&.reward-tokens-container {
+			border-right: $light-blue solid 1px;
+		}
+		p {
+			font-size: 13px;
+			line-height: 21px;
+			font-weight: 400;
+			color: $text;
+			.value-reward {
+				font-size: 24px;
+				line-height: 32px;
+				font-weight: 400;
+				color: $light-blue;
+			}
+			.unit {
+				font-size: 18px;
+				line-height: 26px;
+				font-weight: 400;
+				color: $w;
+			}
+		}
+	}
+	@include m($M) {
+		display: none;
+	}
+}
+
+.btn-contribute-mobile {
+	margin-bottom: 20px;
+	text-align: center;
+	.btn-contribute-wrap {
+		display: inline-block;
+		margin: 0;
+	}
+	@include m($S) {
+		display: none;
+	}
+}
+

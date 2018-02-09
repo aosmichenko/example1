@@ -1,0 +1,295 @@
+.register-page {
+	overflow: visible;
+	#wrapper{
+		overflow: visible;
+	}
+	.header {
+		height: auto;
+		padding-bottom: 0;
+		position: fixed;
+		@include rh(690){
+			position: static;
+		}
+		top: 0;
+		width: 100%;
+		.header-relative-block {
+			height: auto;
+			padding-bottom: 0;
+		}
+	}
+	main.content {
+		height: 100vh;
+		img {
+			width: 100%;
+			position: absolute;
+			z-index: 1;
+			bottom: 2vh;
+		}
+		.osmi-container {
+
+			height: 100%;
+			@include rh(690){
+				height: 110vh;
+			}
+
+			.osmi-grid-container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				.content-block {
+					position: relative;
+					z-index: 3;
+					width: 370px;
+					@include r(440){
+						width: 100%;
+					}
+					h3 {
+						letter-spacing: 1px;
+						text-align: center;
+						margin-bottom: 35px;
+						color: $light-blue;
+						font-size: 20px;
+						line-height: 22px;
+						text-transform: uppercase;
+						font-weight: 500;
+					}
+
+				}
+				form {
+					& > div {
+						display: flex;
+						position: relative;
+						align-items: center;
+					}
+					& > div:before {
+						display: block;
+						width: 15px;
+						height: 15px;
+						top: 50%;
+						transform: translate(0, -50%);
+						position: absolute;
+						background-repeat: no-repeat;
+
+					}
+					.name {
+						&:before {
+							height: 15px;
+							content: "";
+							background-image: url(../img/name.png);
+						}
+					}
+					.email {
+						&:before {
+							content: "";
+							height: 12px;
+							background-image: url(../img/email.png);
+
+
+						}
+					}
+					.password {
+						&:before {
+							height: 15px;
+							content: "";
+							background-image: url(../img/password.png);
+
+						}
+					}
+					.eth {
+						&:before {
+							height: 16px;
+							content: "";
+							background-image: url(../img/ether.png);
+
+						}
+					}
+
+					width: 100%;
+					input {
+						width: 100%;
+						height: 50px;
+						background: none;
+						outline: none;
+						display: flex;
+						align-items: center;
+						border: 0;
+						border-bottom: 1px solid #263d5d;
+						color: $w;
+						padding-left: 28px;
+						font-size: 15px;
+
+						&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+							font-size: 13px;
+							color: $w;
+							letter-spacing: 1px;
+						}
+						&::-moz-placeholder { /* Firefox 19+ */
+							font-size: 13px;
+							color: $w;
+							letter-spacing: 0.25em;
+						}
+						&:-ms-input-placeholder { /* IE 10+ */
+							font-size: 13px;
+							color: $w;
+							letter-spacing: 0.25em;
+						}
+						&:-moz-placeholder { /* Firefox 18- */
+							font-size: 13px;
+							color: $w;
+							letter-spacing: 0.25em;
+						}
+					}
+
+					div.checkbox {
+						display: flex;
+						padding-top: 20px;
+						padding-bottom:7px;
+
+						input[type="checkbox"] {
+							width: 14px;
+							background-color: $light-blue;
+							height: 14px;
+							color: $light-blue;
+							border: 0;
+							position: absolute;
+							left: -999999px;
+						}
+						input[type="checkbox"]:checked + label {
+							&:before {
+								color: $light-blue;
+								content: "\2713";
+								text-align: center;
+							}
+						}
+						label {
+							cursor: pointer;
+							align-items: center;
+							display: flex;
+							font-size: 12px;
+							@include r(400){
+								font-size: 10px;
+
+							}
+							@include r(350){
+								font-size: 9.5px;
+							}
+							&:before {
+								opacity: 0.7;
+								content: '';
+								height: 15px;
+								width: 15px;
+								margin-top: -2px;
+								margin-left: -15px;
+								margin-right: 15px;
+								border: 1px solid $light-blue;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+							}
+							padding-left: 16px;
+							a {
+								margin-left: 5px;
+								color: $light-blue;
+								-webkit-background-size: cover;
+
+								&:hover {
+									opacity: 0.7;
+								}
+							}
+						}
+					}
+
+					button[type="submit"] {
+						color: $w;
+						font-size: 15px;
+						font-weight: 700;
+						width: 409px;
+						height: 93px;
+						border: 0;
+						position: relative;
+						@include transition;
+						cursor: pointer;
+						&:after{
+							@include transition;
+							content:"";
+							opacity: 0;
+							background: url(../img/reg-btn.png) no-repeat;
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							left: 0;
+							top: 0;
+						}
+						background: url(../img/reg-btn.png) no-repeat;
+						&:hover {
+							&:after{
+								opacity: 1;
+								content:"";
+								background: url(../img/reg-btn-h.png) no-repeat;
+								width: 100%;
+								height: 100%;
+								position: absolute;
+								left: 0;
+								top: 0;
+							}
+						}
+						padding-left: 0;
+						text-transform: uppercase;
+						font-weight: 700;
+						font-size: 15px;
+						margin-left: -19px;
+						@include r(440){
+							&:hover{
+								-webkit-background-size: contain;
+								background-size: contain;
+							}
+							margin: 0 auto;
+							margin-left: -19px;
+							-webkit-background-size: contain;
+							background-size: contain;
+							width: 400px;
+							height: 91px;
+							@include r(400){
+								width: 360px;
+								height: 82px;
+							}
+							@include r(350){
+								width: 290px;
+								margin-left: -10px;
+								height: 66px;
+							}
+
+						}
+					}
+				}
+				div.already-have-account {
+					text-align: center;
+					span {
+						color: #dbebff;
+						font-size: 12px;
+						display: block;
+						font-weight: 500;
+
+					}
+					.log-in-gradient {
+						font-weight: 700;
+						display: block;
+						margin-top: 5px;
+						font-size: 15px;
+						text-transform: uppercase;
+						-webkit-background-size: cover;
+						background: -webkit-linear-gradient(0deg, $yell, $red);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						&:hover {
+							opacity: 0.7;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+}

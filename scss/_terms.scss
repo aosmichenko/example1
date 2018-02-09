@@ -1,0 +1,284 @@
+
+.terms {
+	position: relative;
+
+	#wrapper {
+		.header {
+			height: auto;
+			padding-bottom: 0;
+			position: static;
+			top: 0;
+			width: 100%;
+			.header-relative-block {
+				height: auto;
+				padding-bottom: 0;
+			}
+		}
+		.content {
+			@include pb(225);
+			img {
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+				bottom: 2vh;
+			}
+			.terms-container {
+				position: relative;
+				z-index: 3;
+				padding-top: 70px;
+				@include r(500){
+					padding-top: 40px;
+				}
+				.osmi-grid-container {
+					p {
+						display: inline;
+
+					}
+					.row {
+						.terms-and-conditions {
+							margin-bottom: 105px;
+							@include r(500){
+								margin-bottom: 50px;
+							}
+							.terms-and-conditions-block {
+								margin-bottom: 45px;
+								@include r(500){
+									margin-bottom: 25px;
+								}
+							}
+						}
+						h2 {
+							text-transform: none;
+							text-align: left;
+							font-weight: 400;
+							color: $light-blue;
+							font-size: 36px;
+							line-height: 40px;
+							letter-spacing: 0.8px;
+							margin-bottom: 30px;
+							@include r(500) {
+
+								font-size: 30px;
+							}
+						}
+						.last-upd {
+							font-size: 15px;
+							margin-bottom: 10px;
+							span {
+								color: #dbebff;
+							}
+						}
+						h3 {
+
+							@include r(500) {
+								font-size: 20px;
+							}
+							font-weight: 400;
+							color: #dbebff;
+							letter-spacing: 0.6px;
+							text-transform: none;
+							font-size: 24px;
+							line-height: 30px;
+							margin-bottom: 16px;
+						}
+						h5 {
+							line-height: 18px;
+							margin-bottom: 20px;
+							display: block;
+							@include r(500) {
+								font-size: 12px;
+							}
+							font-weight: 400;
+							font-size: 15px;
+							letter-spacing: 1px;
+							margin-left: -25px;
+							color: #dbebff;
+						}
+						ul.main-list {
+							ul {
+
+							}
+							.number-inline {
+								display: inline;
+								margin-right: 5px;
+								margin-left: -25px;
+							}
+							.number {
+								@include r(500) {
+									font-size: 13px;
+								}
+								display: inline;
+								font-size: 15px;
+								color: #dbebff;
+							}
+							& > li {
+								& > ul {
+									padding-left: 50px;
+									li {
+										p {
+										}
+										margin-top: 10px;
+									}
+								}
+								h5 {
+									margin-top: 30px;
+								}
+								li {
+									ul.line{
+										li {
+											&:before {
+												display: inline;
+												content: "-";
+												margin-right: 5px;
+											}
+											text-indent: -15px;
+										}
+									}
+
+								}
+
+							}
+							.sub-list {
+								li {
+									display: flex;
+								}
+								display: inline-block;
+								.number {
+									margin-right: 15px;
+									display: block;
+									height: 100%;
+								}
+							}
+							.benebit {
+								margin-bottom: 60px;
+							}
+							.scope {
+								margin-bottom: 35px;
+							}
+							.bne-price {
+								margin-bottom: 50px;
+								ul {
+									padding-left: 30px;
+								}
+							}
+							.numeric {
+								& > li {
+									h5 {
+										margin-top: 20px;
+									}
+									&:before {
+										display: none;
+										content: "";
+									}
+								}
+							}
+							.bonus-shedule {
+								h2 {
+									text-transform: uppercase;
+								}
+								.token-f {
+									padding-left: 45px;
+								}
+							}
+
+							.refund1 {
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+								margin-top: 45px;
+							}
+							.refund2 {
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+								margin-top: 45px;
+							}
+							.intellectual1 {
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+								margin-top: 45px;
+							}
+							.intellectual2 {
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+								margin-top: 45px;
+							}
+							.intellectual3 {
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+								margin-top: 45px;
+
+							}
+							.intellectual4 {
+								margin-top: 45px;
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+
+							}
+							.intellectual5 {
+								margin-top: 45px;
+								& > p {
+									padding-left: 50px;
+									display: block;
+								}
+
+							}
+						}
+
+						p {
+							letter-spacing: 1px;
+							font-size: 14px;
+							line-height: 25px;
+							@include r(500) {
+								font-size: 12px;
+								line-height: 20px;
+							}
+						}
+						table {
+							display: block;
+							padding-left: 0;
+							width: 100%;
+							margin-bottom: 55px;
+							tr {
+								td {
+									width: 320px;
+									letter-spacing: 1px;
+									padding: 17px;
+									border: 1px solid $light-blue;
+									font-size: 14px;
+									color: #dbebff;
+									line-height: 25px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.additionally {
+			margin-top: 35px;
+			text-transform: uppercase;
+			span {
+				text-transform: none;
+			}
+			a {
+				transform: rotateY(360deg);
+				text-transform: none;
+				color: $light-blue;
+				&:hover {
+					color: #3AA5F5;
+				}
+			}
+		}
+	}
+}

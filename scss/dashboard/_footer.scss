@@ -1,0 +1,32 @@
+#footer-dashboard {
+	text-align: center;
+	padding: 11px;
+	margin-top: 25px;
+	p {
+		font-size: 10px;
+		line-height: 18px;
+		font-weight: 400;
+		color: $text;
+		&.copyright {
+			color: $dash-grey;
+		}
+		a {
+			text-decoration: none;
+			color: $light-blue;
+			@include tr();
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	@include m($S) {
+		margin-top: 35px;
+	}
+	@include m($M) {
+		margin-top: 60px;
+		p {
+			font-size: 13px;
+			line-height: 27px;
+		}
+	}
+}

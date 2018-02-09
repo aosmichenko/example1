@@ -1,0 +1,212 @@
+#sidebar {
+	width: 100%;
+	max-width: 400px;
+	background: $dash-blue-m;
+	height: 100%;
+	min-height: 360px;
+	position: fixed;
+	top: 77px;
+	left: 0;
+	transform: translateX(-100%);
+	z-index: 3;
+	@include tr();
+	overflow: auto;
+	padding-bottom: 130px;
+	&.menu-open {
+		transform: translateX(0);
+		@include tr(.6s);
+		.bottom-links {
+			position: static;
+		}
+	}
+	.bottom-links {
+		padding: 0 40px;
+	}
+	.menu {
+		padding: 0;
+		margin: 40px 0;
+		li {
+			&.active {
+				a {
+					background: $dash-blue-d;
+					&.dashboard-item {
+						&::before {
+							background-position: -10px -9px;
+						}
+					}
+					&.buy-bne-item {
+						&::before {
+							background-position: -10px -56px;
+						}
+					}
+					&.price-calculation-item {
+						&::before {
+							background-position: -10px -103px;
+						}
+					}
+					&.transaction-history-item {
+						&::before {
+							background-position: -10px -150px;
+						}
+					}
+				}
+			}
+			a {
+				display: block;
+				font-size: 13px;
+				line-height: 30px;
+				font-weight: 400;
+				color: $w;
+				text-decoration: none;
+				padding: 11px 10px 11px 80px;
+				position: relative;
+				@include tr();
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 40px;
+					width: 17px;
+					height: 17px;
+					background: url("../img/icons.png") no-repeat;
+					background-size: 75px 175px;
+				}
+				&.dashboard-item {
+					&::before {
+						background-position: -47px -9px;
+					}
+				}
+				&.buy-bne-item {
+					&::before {
+						background-position: -47px -56px;
+					}
+				}
+				&.price-calculation-item {
+					&::before {
+						background-position: -47px -103px;
+					}
+				}
+				&.transaction-history-item {
+					&::before {
+						background-position: -47px -150px;
+					}
+				}
+				&:hover {
+					background: $dash-blue-d;
+					&.dashboard-item {
+						&::before {
+							background-position: -10px -9px;
+						}
+					}
+					&.buy-bne-item {
+						&::before {
+							background-position: -10px -56px;
+						}
+					}
+					&.price-calculation-item {
+						&::before {
+							background-position: -10px -103px;
+						}
+					}
+					&.transaction-history-item {
+						&::before {
+							background-position: -10px -150px;
+						}
+					}
+				}
+			}
+		}
+	}
+	@include m($S) {
+		top: 82px;
+		.menu {
+			margin: 50px 0;
+			li {
+				a {
+					line-height: 35px;
+				}
+			}
+		}
+	}
+	@include m($M) {
+		top: 82px;
+		height: calc(100% - 82px);
+		width: 225px;
+		max-width: none;
+		left: 0;
+		transform: translateX(0);
+		.menu {
+			margin: 62px 0 0;
+			li {
+				a {
+					line-height: 22px;
+				}
+			}
+		}
+		.bottom-links {
+			text-align: center;
+			position: fixed;
+			width: 225px;
+			bottom: 0;
+			left: 0;
+			padding: 0;
+			.token-sale-terms {
+				padding: 13px 15px;
+			}
+		}
+		.menu {
+			padding: 0;
+			margin: 50px 0 0;
+			li {
+				a {
+					padding: 11px 10px 11px 50px;
+					&::before {
+						left: 15px;
+					}
+				}
+			}
+		}
+	}
+	@include m($L) {
+		top: 84px;
+		height: calc(100% - 84px);
+		.menu {
+			padding: 0;
+			margin: 50px 0 0;
+			li {
+				a {
+					padding: 11px 10px 11px 50px;
+					&::before {
+						left: 15px;
+					}
+				}
+			}
+		}
+	}
+	@include m($XL) {
+		top: 100px;
+		height: calc(100% - 100px);
+		width: 275px;
+		left: 0;
+		.bottom-links {
+			width: 275px;
+			.token-sale-terms {
+				padding: 13px 15px;
+			}
+		}
+		.menu {
+			padding: 0;
+			margin: 62px 0 0;
+			li {
+				a {
+					padding: 11px 10px 11px 80px;
+					&::before {
+						left: 40px;
+					}
+				}
+			}
+		}
+	}
+}

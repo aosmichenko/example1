@@ -1,0 +1,476 @@
+#wrapper {
+	.logo-slider-wrapper {
+		position: relative;
+		height: 12rem;
+		align-items: center;
+		.logo-slider {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			z-index: 3;
+			.slick-track {
+				display: flex;
+				align-items: center;
+			}
+			.Arr {
+				&:hover {
+					background-color: $light-blue;
+					border-color: $dark-blue;
+					border-style: solid;
+				}
+				@include transition;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px dashed $light-blue;
+				min-width: 36px;
+				height: 36px;
+				border-radius: 50%;
+				i {
+					font-size: 18px;
+					display: block;
+				}
+			}
+			.slider-item {
+				opacity: .5;
+				-webkit-backface-visibility: hidden;
+
+				&:hover {
+					opacity: 1;
+				}
+				width: auto;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				img {
+					display: block;
+				}
+			}
+		}
+		.opacity-block {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background-color: $dark-blue;
+			opacity: 0.4;
+		}
+	}
+
+	.main-content {
+		.about {
+			.osmi-container {
+				.about__content {
+					.info-block {
+						width: 100%;
+						position: relative;
+						display: flex;
+						@include r($M-) {
+							flex-wrap: wrap;
+						}
+						.section-title-wrapper {
+							position: absolute;
+							top: 60%;
+							transform: translate(0, -50%);
+							left: -190px;
+							left: -19rem;
+							z-index: 3;
+							@include r($M-) {
+								transform: translate(0, -25%);
+								left: -18rem;
+							}
+							@include r($M-) {
+								width: 100% !important;
+								height: auto !important;
+								text-align: center;
+								transform: translate3d(0, 0, 0) !important;
+								position: static;
+								@include mb(60);
+							}
+							h2 {
+								@include r($M-) {
+									display: inline;
+									width: 100% !important;
+									text-align: center;
+									height: auto !important;
+									transform: translate3d(0, 0, 0) !important;
+								}
+								@include m($M) {
+									text-align: right;
+									letter-spacing: 2px;
+									display: block;
+									width: 220px !important;
+									width: 22rem !important;
+									@include r(1100) {
+										@include fz(60);
+										@include lh(53);
+									}
+
+								}
+
+							}
+						}
+
+						.video-block {
+							background-image: url(../video/videoBG.jpg);
+							width: 51%;
+							overflow: hidden;
+							position: relative;
+							z-index: 2;
+							@include r($M-) {
+								width: 100%;
+								height: 60rem;
+								@include mb(40);
+							}
+
+							.play-btn {
+								cursor: pointer;
+								z-index: 4;
+								background: url(../img/play-btn2.png);
+								background-repeat: no-repeat;
+								background-position: center;
+								@include absCenter;
+								border-radius: 50%;
+								@include transition;
+								width: 122px;
+								height: 122px;
+								border: 22px solid rgba(255, 255, 255, 0.6);
+
+								&:hover {
+									opacity: 0.7;
+								}
+							}
+						}
+						.text {
+							position: relative;
+							z-index: 2;
+							@include pr(100);
+							@include pl(100);
+							@include pb(140);
+							@include m(2100) {
+								padding-right: 19%;
+							}
+							@include r(1800) {
+								@include pb(80);
+								@include pr(40);
+								@include pl(80);
+							}
+							@include r(1400) {
+								@include pb(40);
+								@include pl(80);
+								@include pr(100);
+							}
+							@include r(1200) {
+								@include pr(0);
+							}
+							@include r($M-) {
+								width: 100%;
+								padding-left: 0;
+								padding-right: 0;
+								padding-bottom: 0;
+							}
+							width: 60%;
+							h4 {
+								@include r(1400) {
+									font-weight: 500;
+								}
+								font-weight: 400;
+								display: block;
+								@include pt(40);
+								@include pb(115);
+								@include r($M-) {
+									font-size: 24px;
+									font-weight: 700;
+								}
+								span {
+									height: 22px;
+									position: relative;
+									display: block;
+									&:after {
+										z-index: 5;
+										position: absolute;
+										left: -200px;
+										left: -20rem;
+										bottom: -40px;
+										bottom: -4rem;
+										@include r($M-) {
+											bottom: -20px;
+											bottom: -1.8rem;
+										}
+										display: block;
+										content: "";
+										height: 3px;
+										width: 35rem;
+										background: linear-gradient(90deg, $yell, $red);
+									}
+								}
+								@include r($M-) {
+									@include pb(50);
+								}
+							}
+							p {
+								line-height: 25px;
+
+							}
+						}
+						.bg-title {
+							height: 200px !important;
+							position: absolute;
+							bottom: -270px;
+							left: 370px;
+							width: 50% !important;
+							bottom: -27rem;
+							left: 37rem;
+							@include r($M-) {
+								display: none;
+							}
+							@include r(1500) {
+								left: 25rem;
+								@include rh(900) {
+									left: 310px;
+								}
+							}
+							@include r(1325) {
+								left: 15rem;
+							}
+							@include r(1199) {
+								left: 35rem;
+							}
+							@include r($M-) {
+								display: none;
+							}
+							@include rh(799) {
+								bottom: -35rem;
+								//left: 52rem;
+							}
+							@include rh(599) {
+								display: none;
+							}
+						}
+					}
+				}
+
+			}
+			.user-benebit-brand-wrapper {
+				position: relative;
+				@include mt(195);
+				@include mb(170);
+				@include m(2000) {
+					@include mb(270);
+				}
+				padding: 0 !important;
+				.osmi-container {
+					max-width: 1600px;
+					margin: 0 auto;
+					@include r(1600) {
+						max-width: 1300px;
+					}
+					@include r(1340) {
+						max-width: 980px;
+					}
+				}
+				@include r($M-) {
+					height: auto;
+					@include mt(100);
+				}
+				z-index: 2;
+
+				.wave {
+					background: url(../img/user-benedit-brand-bg7.png) no-repeat center 0px;
+					width: 100%;
+					left: 0;
+					z-index: 1;
+					top: 0;
+					height: 100%;
+					position: absolute;
+					@include r(1600) {
+						background-size: 1600px auto;
+					}
+					@include r(1300) {
+						background-size: 1300px auto;
+					}
+					@include r($M-) {
+						display: none;
+					}
+				}
+				#particles-js {
+					width: 100%;
+					left: 0;
+					z-index: 0;
+					top: 0;
+					height: 80%;
+					position: absolute;
+
+					canvas {
+						width: 100% !important;
+					}
+					@include r($M-) {
+						height: 70%;
+						width: 100%;
+						@include absCenter;
+					}
+				}
+				.osmi-container {
+					height: 100%;
+				}
+				.user-benebit-brand {
+					height: 100%;
+					position: relative;
+					z-index: 4;
+					@include m(1301) {
+						min-height: 700px;
+					}
+					@include m(981) {
+						min-height: 500px;
+					}
+					margin-bottom: 180px;
+					@include r(1600) {
+						margin-bottom: 150px;
+					}
+					@include r(1300) {
+						margin-bottom: 50px;
+					}
+					figure.content-block {
+						width: 33.33333%;
+						float: left;
+						padding: 0 15px;
+						position: relative;
+						&:nth-child(1) {
+							top: 150px;
+						}
+						&:nth-child(2) {
+							top: 180px;
+						}
+						&:nth-child(3) {
+							top: 15px;
+						}
+						@include r(1600) {
+							&:nth-child(1) {
+								top: 140px;
+							}
+							&:nth-child(2) {
+								top: 155px;
+							}
+							&:nth-child(3) {
+								top: 15px;
+							}
+						}
+						@include r(1300) {
+							&:nth-child(1) {
+								top: 150px;
+							}
+							&:nth-child(2) {
+								top: 125px;
+							}
+							&:nth-child(3) {
+								top: 15px;
+							}
+						}
+
+						@include r($M-) {
+							position: static;
+							width: 80%;
+							float: none;
+							margin: 0 auto;
+							max-width: 300px;
+							@include mb(100);
+							transform: translate(0, 0) !important;
+						}
+						text-align: center;
+						img {
+							width: 200px;
+							height: 200px;
+							@include r(1600) {
+								width: 150px;
+								height: 150px;
+							}
+							@include r(1300) {
+								width: 120px;
+								height: 120px;
+							}
+						}
+						figcaption {
+							@include m(1601) {
+								padding: 0 40px;
+							}
+							h5 {
+								letter-spacing: 0.1em;
+								@include pt(25);
+								@include pb(35);
+								text-transform: uppercase;
+								font-weight: 600;
+								@include fz(24);
+							}
+							p {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.pop-up {
+		@include transition;
+		opacity: 0;
+		position: fixed;
+		width: 100%;
+		&.zIndexHigh {
+			z-index: 20;
+		}
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.wrapper {
+			width: 80%;
+			position: relative;
+			height: 70%;
+			.pop-up-close {
+				display: block;
+				cursor: pointer;
+				width: 17px;
+				height: 16px;
+				position: absolute;
+				right: 5px;
+				z-index: 16;
+				top: -40px;
+				background-image: url(../img/close-X.png);
+				-webkit-background-size: cover;
+				background-size: cover;
+				@include transition;
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+			.pop-up-video-block {
+				overflow: hidden;
+				height: 100%;
+				.videoInsert {
+					object-fit: cover;
+					top: 0;
+					left: 0;
+					min-width: 100%;
+					min-height: 100%;
+					width: 100%;
+					max-width: 100%;
+					max-height: 100%;
+					height: auto;
+					z-index: 2;
+					background-size: cover;
+					overflow: hidden;
+				}
+			}
+		}
+
+	}
+}
+
+

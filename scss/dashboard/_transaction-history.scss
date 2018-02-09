@@ -1,0 +1,114 @@
+.panel-wrap.transaction-history {
+	.panel-body {
+		padding: 0;
+		overflow-x: auto;
+		.btn-contribute-wrap {
+			margin-left: 0;
+		}
+	}
+}
+.transaction-history-table-top {
+	width: 100%;
+	min-width: 840px;
+	border-collapse: collapse;
+	border-spacing: 0;
+	th {
+		text-align: left;
+		padding: 28px 24px;
+		font-size: 12px;
+		line-height: 20px;
+		font-weight: 400;
+		color: $light-blue;
+		@include m($XL) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	tr:nth-child(2n) {
+		background: #161d2f;
+	}
+	td {
+		padding: 18px 24px;
+		font-size: 10px;
+		line-height: 18px;
+		font-weight: 400;
+		color: $text;
+		@include m($XL) {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+	.date-cell {
+		width: 21%;
+		border-right: 1px solid #212a40;
+	}
+	.address-cell {
+		width: 30%;
+		border-right: 1px solid #212a40;
+	}
+	.currency-cell {
+		width: 16%;
+		border-right: 1px solid #212a40;
+	}
+	.amount-cell {
+		width: 13%;
+		border-right: 1px solid #212a40;
+	}
+	.token-amount-cell {
+		width: 20%;
+	}
+}
+.inest-question {
+	padding: 20px 10px;
+	text-align: center;
+	background: #161d2f;
+	p {
+		padding: 0 15px;
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: 400;
+		color: $text;
+		display: block;
+	}
+	.btn-contribute-wrap {
+		display: inline-block;
+		margin: 20px 0 0;
+		.btn-contribute {
+			font-size: 12px;
+			line-height: 32px;
+			padding: 0 20px;
+		}
+	}
+	@include m($S) {
+		padding: 35px 15px;
+		p {
+			font-size: 18px;
+			line-height: 26px;
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.btn-contribute-wrap {
+			margin-top: 15px;
+		}
+	}
+	@include m($M) {
+		padding: 50px 15px;
+		p {
+			margin-right: 30px;
+		}
+		.btn-contribute-wrap {
+			.btn-contribute {
+				font-size: 14px;
+				line-height: 48px;
+				padding: 0 35px;
+			}
+		}
+	}
+	@include m($L) {
+		.btn-contribute-wrap {
+			.btn-contribute {
+				padding: 0 50px;
+			}
+		}
+	}
+}

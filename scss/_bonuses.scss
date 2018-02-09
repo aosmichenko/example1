@@ -1,0 +1,91 @@
+.bonuses {
+	position: relative;
+	img.bonuses-wave {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		transform: translate(0, -50%);
+		left: 0;
+		width: 100%;
+		height: auto;
+
+	}
+	h2 {
+		z-index: 3;
+	}
+	.bg-title {
+		z-index: 2;
+	}
+	.bonuses__content {
+		@include mt(145);
+		@include mb(215);
+		@include r($M-) {
+			@include mt(80);
+			@include mb(120);
+		}
+		.flex-wrapper {
+			display: flex;
+			justify-content: space-between;
+			@include r($S-) {
+				&:before {
+					display: none;
+				}
+				&:after {
+					display: none;
+				}
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-content: space-between;
+			}
+			.data-block {
+				display: flex;
+				align-items: flex-end;
+				position: relative;
+				align-content: flex-end;
+				flex-wrap: wrap;
+				width: 14.6%;
+				@include r($S-) {
+					width: 42%;
+					@include mb(70);
+				}
+				img {
+					width: 100%;
+					display: block;
+				}
+				div.time {
+					text-align: center;
+					width: 100%;
+					color: $light-blue;
+					@include fz(18);
+					@include mt(15);
+					@media screen and (max-width: 1088px) and (min-width: 978px) {
+						@include fz(16);
+					}
+					@media screen and (max-width: 836px) {
+						@include fz(16);
+					}
+					@include r($S-) {
+						font-size: 13px;
+					}
+				}
+				.bonus {
+					text-align: center;
+					width: 100%;
+					position: absolute;
+					display: block;
+					z-index: 2;
+					bottom: 45px;
+					bottom: 4.5rem;
+					font-weight: 700;
+					color: $w;
+					@include fz(14);
+					@include r($S-) {
+						font-size: 12px;
+						bottom: 30px;
+					}
+				}
+			}
+		}
+
+	}
+}

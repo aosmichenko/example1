@@ -1,0 +1,106 @@
+.panel-wrap.price-calculation-wrap {
+	.panel-body {
+		padding: 20px;
+		.label-bne {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 6px;
+			font-size: 15px;
+			line-height: 38px;
+			font-weight: 600;
+			color: $w;
+			border: 1px solid $dash-bg-pan-b;
+			text-transform: uppercase;
+			border-radius: 18px;
+			padding: 0 15px;
+			background: $dash-bg-pan-b;
+			@include tr();
+			letter-spacing: 1px;
+			@include m($S) {
+				padding: 0 24px;
+			}
+		}
+		@include m($S) {
+			padding: 30px;
+		}
+		@include m($M) {
+			padding: 30px 40px 40px;
+		}
+	}
+}
+
+.current-info-block.invested.price-calculation-info {
+	padding: 25px 0 0;
+	background: none;
+	border: none;
+	.block-invested-value {
+		margin: 0 0 20px;
+		padding-left: 85px;
+		justify-content: center;
+		& > p {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+	@include m($S) {
+		padding: 30px 0 0;
+		.block-invested-value {
+			margin-bottom: 30px;
+			& > p {
+				font-size: 20px;
+				line-height: 28px;
+			}
+			&::before {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+	@include m($M) {
+		padding: 40px 0 0;
+		.block-invested-value {
+			margin: 0 20px 20px;
+			padding-left: 70px;
+			justify-content: center;
+			& > p {
+				font-size: 14px;
+				line-height: 22px;
+			}
+			&::before {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+	@include m($L) {
+		.block-invested-value {
+			padding-left: 90px;
+			& > p {
+				font-size: 20px;
+				line-height: 28px;
+			}
+			&::before {
+				width: 70px;
+				height: 70px;
+			}
+		}
+	}
+	@include m($XL) {
+		.block-invested-value {
+			margin-bottom: 0;
+			& > p {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+	@include m(1850) {
+		.block-invested-value {
+			& > p {
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+	}
+}

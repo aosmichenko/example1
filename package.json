@@ -1,0 +1,24 @@
+{
+  "name": "osmilab-starter",
+  "version": "1.0.0",
+  "devDependencies": {
+    "bower": "*",
+    "browser-sync": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-bless": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-load-plugins": "*",
+    "gulp-notify": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp.spritesmith": "*",
+    "node-bourbon": "*",
+    "node-sass": "*",
+    "vinyl-buffer": "^1.0.0"
+  }
+}

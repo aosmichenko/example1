@@ -1,0 +1,34 @@
+.register-page.login {
+	#wrapper {
+		div.checkbox {
+			input[type="checkbox"]:checked + label {
+				&:before {
+					display: flex;
+					justify-self: start;
+				}
+			}
+			&:before {
+				margin-right: 13px;
+
+			}
+			label {
+				display: flex;
+				width: 100%;
+				div.text {
+					width: -webkit-fill-available;
+					display: flex;
+					margin-right: -4px;
+					justify-content: space-between;
+					span.rememberme {
+
+					}
+					a {
+						margin-left: 0;
+						-webkit-background-size: cover;
+
+					}
+				}
+			}
+		}
+	}
+}

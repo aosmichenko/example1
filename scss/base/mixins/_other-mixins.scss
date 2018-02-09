@@ -1,0 +1,52 @@
+@mixin pl($Val) {
+	padding-left: $Val + px;
+	padding-left: $Val / 10 + rem;
+}
+@mixin pr($Val) {
+	padding-right: $Val + px;
+	padding-right: $Val / 10 + rem;
+}
+@mixin pt($Val) {
+	padding-top: $Val + px;
+	padding-top: $Val / 10 + rem;
+}
+@mixin pb($Val) {
+	padding-bottom: $Val + px;
+	padding-bottom: $Val / 10 + rem;
+}
+
+@mixin ml($Val) {
+	margin-left: $Val + px;
+	margin-left: $Val / 10 + rem;
+}
+@mixin mr($Val) {
+	margin-right: $Val + px;
+	margin-right: $Val / 10 + rem;
+}
+@mixin mt($Val) {
+	margin-top: $Val + px;
+	margin-top: $Val / 10 + rem;
+}
+@mixin mb($Val) {
+	margin-bottom: $Val + px;
+	margin-bottom: $Val / 10 + rem;
+}
+/*
+@mixin ml($Val) {
+	margin-left: $Val + px;
+	margin-left: $Val / 10 + rem;
+}
+@mixin mr($Val) {
+	margin-right: $Val + px;
+	margin-right: $Val / 10 + rem;
+}
+@mixin mt($Val) {
+	margin-top: $Val + px;
+	margin-top: $Val / 10 + rem;
+}
+@mixin mb($Val) {
+	margin-bottom: $Val + px;
+	margin-bottom: $Val / 10 + rem;
+}
+
+*/

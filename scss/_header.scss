@@ -1,0 +1,819 @@
+.first-space-bg {
+	@include pb(200);
+	background-image: url(../img/intro-bg.jpg);
+	-ms-background-position-y: 100%;
+	background-position-y: 100%;
+	@include r($M-) {
+		@include pb(100);
+	}
+}
+
+.header {
+	z-index: 7;
+	font-size: 10px;
+	@include r($L-) {
+		font-size: 9px;
+	}
+	@include r($M-) {
+		font-size: 6px;
+	}
+	@include rh(920) {
+		@include m($M) {
+			font-size: 9px;
+		}
+	}
+	@include rh(800) {
+		@include m($M) {
+			font-size: 8px;
+		}
+	}
+	@include rh(700) {
+		@include m($M) {
+			font-size: 6.8px;
+		}
+	}
+	@include rh(580) {
+		@include m($M) {
+			font-size: 6px;
+		}
+	}
+	@include r(630) {
+		font-size: 5px;
+	}
+	@include r(360) {
+		font-size: 4px;
+	}
+	@include r($S-) {
+		@include m(500) {
+			@include mh(700) {
+				font-size: 7px;
+			}
+			@include mh(800) {
+				font-size: 8px;
+			}
+			@include mh(1000) {
+				font-size: 9px;
+			}
+		}
+	}
+	@include pb(40);
+	position: relative;
+	@include mh(800) {
+		height: 100vh;
+	}
+	&.compensator {
+		padding-top: 14em;
+		@include r($M-) {
+			padding-top: 10em;
+		}
+	}
+	.header-relative-block {
+		height: 100%;
+		position: relative;
+		//
+
+		padding-bottom: 11rem;
+		.header__panel {
+			&.after-header-fixed-menu {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: $dark-blue;
+				z-index: 5;
+				padding-left: 50px;
+				padding-right: 50px;
+				@include r($M-) {
+					padding-left: 40px;
+					padding-right: 40px;
+				}
+				@include r($S-) {
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+
+				@include r($S-) {
+					.logo {
+						display: none;
+					}
+					.header__panel-right-content {
+						.lang-block {
+							display: none;
+						}
+						.log-in {
+							display: none;
+						}
+					}
+					.mobile-nav-button {
+						width: 100%;
+						display: flex;
+						justify-content: flex-start;
+						a {
+							font-size: 1.5em;
+						}
+						.contribute-now {
+							margin-right: 15px;
+							@include r(500);
+							margin-right: 9px;
+						}
+						.telegram {
+							background-image: none;
+							background-color: $telegram;
+
+						}
+					}
+				}
+			}
+			.mobile-nav-button {
+				display: none;
+			}
+			font-size: 10px;
+			@include r(1600) {
+				font-size: 9px;
+			}
+			@include r(1400) {
+				font-size: 8px;
+			}
+			@include r(1130) {
+				font-size: 7px;
+			}
+			@include r(1050) {
+				font-size: 6.6px;
+			}
+			@include r(980) {
+				font-size: 10px;
+			}
+			@include r(500) {
+				font-size: 7px;
+			}
+			@include r(400) {
+				font-size: 6px;
+			}
+			@include r(360) {
+				font-size: 5px;
+			}
+			display: flex;
+			justify-content: space-between;
+			height: 14em;
+			display: flex;
+			align-items: center;
+			@include r($M-) {
+				height: 10em;
+
+			}
+			text-align: center;
+			.logo-wrapper {
+				text-align: left;
+				display: inline-block;
+				a {
+					cursor: pointer;
+					display: block;
+					width: 15.7em;
+					height: 4.3em;
+					position: relative;
+					background: url(../img/logo.png) no-repeat;
+					background-size: cover;
+					-webkit-background-size: cover;
+
+					&:hover {
+						background: url(../img/logo-h.png) no-repeat;
+						background-size: cover;
+						-webkit-background-size: cover;
+					}
+				}
+			}
+			.nav {
+				align-items: center;
+				@include m($M) {
+					display: flex;
+				}
+				display: none;
+				ul.nav-menu {
+					li {
+						padding-left: 2.25em;
+						padding-right: 2.25em;
+						@include r($L-) {
+							padding-left: 1.5em;
+							padding-right: 1.5em;
+						}
+						display: inline-block;
+						a {
+							letter-spacing: 0.2em;
+							color: $w;
+							&:hover {
+								color: $light-blue;
+							}
+							font-weight: 700;
+							text-transform: uppercase;
+							font-size: 12px;
+							@include r(1600) {
+								font-size: 1.2em;
+							}
+						}
+					}
+				}
+				/*mobile nav*/
+				@include r($M-) {
+					&.nav-mobile_open {
+						scroll: auto;
+						display: block;
+						height: 100%;
+						z-index: 100;
+						width: 350px;
+						@include r(600) {
+							width: 100%;
+						}
+						position: fixed;
+						right: 0;
+						top: 0;
+						background-color: $dark-blue;
+						padding-top: 40px;
+						@include r(500) {
+							padding-top: 35px;
+						}
+						@include pl(60);
+						@include pr(180);
+						ul.nav-menu {
+							text-align: left;
+							li {
+								margin-bottom: 20px;
+								display: block;
+								a {
+									font-size: 20px;
+									@include r(500) {
+										font-size: 18px;
+
+									}
+									letter-spacing: normal;
+								}
+							}
+						}
+					}
+				}
+			}
+			.header__panel-right-content {
+				display: flex;
+				align-items: center;
+
+				.lang-block {
+					margin-right: 2em;
+					width: 3.4em;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 3.4em;
+					@include r($M-) {
+						height: 23px;
+						width: 23px;
+					}
+					border-radius: 50%;
+					border: 2px solid #273757;
+					cursor: pointer;
+					background-color: $lang-bg;
+					&:hover {
+						background-color: $light-blue;
+						@include transition;
+					}
+					img {
+						display: block;
+						width: 15px;
+						height: 11px;
+					}
+				}
+
+				#nav-icon {
+					@include m($M) {
+						display: none;
+					}
+				}
+
+			}
+		}
+		.header__content-wrapper {
+			@include m(2000) {
+				height: 80vh;
+				display: flex;
+				align-items: center;
+				.row {
+					width: 100%;
+				}
+			}
+			.row{
+				width: 100%;
+			}
+			@include r($L-) {
+				@include mh(850) {
+					height: 80vh;
+					display: flex;
+					align-items: center;
+				}
+				@include m($M) {
+					height: 80vh;
+					display: flex;
+					align-items: center;
+					.row {
+						width: 100%;
+					}
+				}
+			}
+			padding-bottom: 10vh;
+			@include mh(800) {
+				position: static;
+			}
+			top: 55%;
+			width: 100%;
+			text-align: center;
+			.row{
+				margin-left: 0;
+				margin-right: 0;
+			}
+			.header__content {
+				padding-left: 0;
+				padding-right: 0;
+				.timer {
+					@include mh(1000) {
+						margin-bottom: 10em;
+					}
+					margin-bottom: 7em;
+					@include rh(799) {
+						margin-bottom: 10em;
+						margin-top: 2em;
+					}
+					.timer__title {
+						font-size: 16px;
+						font-size: 1.6em;
+						color: $orange;
+						@include mb(30);
+						opacity: 1;
+						font-weight: 600;
+						@include r(500) {
+							font-size: 11px;
+						}
+					}
+					.timer__time {
+						span {
+							width: 100px;
+							width: 10rem;
+							letter-spacing: 3px;
+							display: inline-block;
+							position: relative;
+							@include pl(23);
+							@include pr(23);
+							@include fz(48);
+							@include r(500) {
+								font-size: 20px;
+							}
+							color: $w;
+
+							&:before {
+								position: absolute;
+								left: 0;
+								top: 50%;
+								background-color: $w;
+								transform: translate(0, -50%);
+								content: "";
+								display: block;
+								width: 3px;
+								height: 3px;
+							}
+							&:after {
+								@include m($M) {
+									@include r(1050) {
+										@include rh(700) {
+											display: none;
+										}
+									}
+								}
+								left: 50%;
+								transform: translate(-50%);
+								bottom: -50px;
+								bottom: -5rem;
+								color: $light-blue;
+								font-size: 16px;
+								font-size: 1.6rem;
+								text-transform: uppercase;
+								position: absolute;
+								display: block;
+								@include r(500) {
+									font-size: 10px;
+								}
+							}
+							&:first-child {
+								&:before {
+									display: none;
+								}
+							}
+
+							&.osmi-days {
+								&:after {
+									content: "D";
+								}
+							}
+							&.osmi-hours {
+								&:after {
+									content: "H";
+								}
+							}
+							&.osmi-minutes {
+								&:after {
+									content: "M";
+								}
+							}
+							&.osmi-seconds {
+								&:after {
+									content: "S";
+								}
+							}
+						}
+
+					}
+				}
+				.title-and-btn {
+					@include mh(1000) {
+						margin-bottom: 8em;
+					}
+					@include rh(800) {
+						margin-bottom: 7em;
+					}
+					@include r(500) {
+						margin-bottom: 15px;
+					}
+					margin-bottom: 0.5em;
+					h1 {
+						margin-bottom: 0.2em;
+						@include rh(799) {
+							margin-bottom: 0.7em;
+						}
+						@include r(500) {
+							margin-bottom: 10px;
+						}
+						letter-spacing: 0.2em;
+					}
+					.osmi-btn-wrapper {
+						margin-left: auto;
+						margin-right: auto;
+						.osmi-btn {
+
+							letter-spacing: 1.2px;
+						}
+					}
+				}
+				.progress-wrapper {
+					ul.cryptocoins {
+						margin-bottom: 4.5vh;
+						@include r(500) {
+							margin-bottom: 8px;
+						}
+						@include r(400) {
+							margin-bottom: 15px;
+						}
+						display: flex;
+						justify-content: space-between;
+						font-size: 16px;
+						font-size: 1.6em;
+						@include rh(799) {
+							font-size: 14px;
+						}
+						@include r($S-) {
+							font-size: 12px;
+						}
+						li {
+							font-weight: 600;
+							display: flex;
+							@include r(400) {
+								flex-wrap: wrap;
+								justify-content: space-between;
+								width: 55px;
+							}
+							align-items: center;
+							&:first-child {
+								&:before {
+									@include r($S-) {
+										margin-left: -25px;
+										margin-left: -2.5em;
+									}
+									margin-left: -12px;
+									margin-left: -1.2em;
+									@include r($S-) {
+										margin-left: 0;
+									}
+								}
+							}
+							&:before {
+								width: 54px;
+								margin-right: 0.7em;
+								height: 56px;
+								@include r($S-) {
+									margin-right: 0;
+								}
+							}
+							&.btc {
+								&:before {
+									content: url(../img/btc.png);
+								}
+							}
+							&.eth {
+								&:before {
+									content: url(../img/eth.png);
+								}
+							}
+							&.ltc {
+								&:before {
+									content: url(../img/L.png);
+								}
+							}
+							&.dash {
+								&:before {
+									height: 50px;
+									content: url(../img/dash.png);
+								}
+							}
+						}
+					}
+					.progress-block {
+						.labels {
+							margin-bottom: 7px;
+							display: flex;
+							justify-content: space-between;
+
+							span {
+								color: $light-blue;
+								font-weight: 400;
+								font-size: 13px;
+								@include r($S-) {
+									font-size: 10px;
+								}
+								font-family: $lato;
+								letter-spacing: 1.2px;
+							}
+						}
+						.line {
+							width: 100%;
+							position: relative;
+							height: 6px;
+							background: linear-gradient(90deg, $yell, $red);
+
+							.indicator {
+								transform: translate(-24%, -42%);
+								position: absolute;
+
+								left: 0;
+								top: 0;
+								width: 32px;
+								height: 32px;
+								text-align: center;
+								background-image: url(../img/indicator.png);
+								&:after {
+									width: 100px;
+									display: block;
+									color: $w;
+									font-family: $lato;
+									text-transform: uppercase;
+									margin-top: 40px;
+									font-size: 15px;
+									font-size: 1.5em;
+									letter-spacing: 1.2px;
+									margin-left: -32px;
+									font-weight: 700;
+									content: "total 50,000,000";
+									@include r($M-) {
+										margin-left: -14px;
+										font-size: 10px;
+										width: 65px;
+									}
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+		.header__bottom-wrapper {
+			position: absolute;
+			@include rh(799) {
+				position: static;
+			}
+			bottom: 30px;
+			bottom: 3em;
+			@include rh(940) {
+				bottom: 15px;
+				bottom: 1.5em;
+			}
+			@include r(1400) {
+				bottom: 15px;
+				bottom: 1.5em;
+			}
+			width: 100%;
+			.header__bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				@include r(500) {
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+				.left-block {
+
+					.left {
+						display: inline-block;
+						@include r(500) {
+							margin-bottom: 25px;
+							margin-top: 35px;
+						}
+						li {
+							font-family: $lato;
+							letter-spacing: 1px;
+							opacity: 0.5;
+							color: $light-blue;
+							font-size: 13px;
+							font-size: 1.3em;
+							@include r(870) {
+								font-size: 12px;
+							}
+							@include r(500) {
+								font-size: 12px;
+								line-height: 15px;
+							}
+						}
+					}
+					.right {
+						margin-left: 30px;
+						margin-left: 3em;
+						@include r($L-) {
+							margin-left: 1.5em;
+						}
+						@include r(870) {
+							margin-left: 10px;
+						}
+						display: inline-block;
+						li {
+							font-weight: 700;
+							font-size: 13px;
+							font-size: 1.3em;
+							font-family: $lato;
+							letter-spacing: 1px;
+							@include r(870) {
+								font-size: 12px;
+							}
+							@include r(500) {
+								font-size: 12px;
+								line-height: 15px;
+							}
+						}
+					}
+				}
+				.center-block {
+					display: flex;
+					.icons {
+						@include r(870) {
+							display: none;
+						}
+						text-align: center;
+						li {
+							&:last-child {
+								i {
+									font-size: 30px;
+								}
+							}
+							padding-left: 18px;
+							padding-right: 18px;
+							@include r(1400) {
+								padding-left: 15px;
+								padding-right: 15px;
+								padding-left: 1.5em;
+								padding-right: 1.5em;
+							}
+							@include r($L-) {
+								@include m($M) {
+									padding-left: 0.6em;
+									padding-right: 0.6em;
+								}
+								padding-left: 12px;
+								padding-right: 12px;
+							}
+							display: inline-block;
+							a {
+
+								display: block;
+								i {
+									display: block;
+									-webkit-backface-visibility: hidden;
+									@include transition;
+									width: 28px;
+									@include r($M-) {
+										width: 20px;
+									}
+									height: 28px;
+									font-size: 25px;
+									color: $light-blue;
+									opacity: 0.5;
+									&.custom-icon {
+										margin-bottom: -8px;
+										display: block;
+										width: 26px !important;
+										position: relative;
+										background: url(../img/iconXZ.png) no-repeat;
+									}
+
+								}
+
+								&:hover {
+									i {
+										opacity: 1;
+									}
+								}
+							}
+						}
+					}
+				}
+				.right-block {
+					text-align: center;
+
+					.label {
+						font-family: $lato;
+						color: $light-blue;
+						opacity: 0.6;
+						font-size: 12px;
+						margin-bottom: 10px;
+						margin-bottom: 1em;
+						display: block;
+					}
+					.osmi-btn.download {
+						box-shadow: 0 0 1px $red;
+						&:hover {
+							box-shadow: 0 0 10px $light-orange;
+						}
+						border-radius: 21px;
+						border: 1px solid $light-orange;
+						width: 250px;
+						height: 42px;
+						@include r($M-) {
+							width: 180px;
+							height: 38px;
+						}
+						@include r(500) {
+							width: 250px;
+							height: 42px;
+						}
+						display: flex;
+						justify-content: center;
+						text-align: center;
+						span {
+							font-weight: 400;
+							color: $w;
+							@include r($M-) {
+								font-size: 9px;
+							}
+							font-size: 11px;
+							letter-spacing: 1px;
+							text-transform: uppercase;
+							@include r(500) {
+								font-size: 12px;
+							}
+							@include r(360) {
+								line-height: 1.1em;
+							}
+							&:before {
+								margin-right: 6px;
+								display: inline-block;
+								transform: translate(0, 4%);
+								content: url(../img/download_icon.png);
+								@include r($L-) {
+									transform: translate(0, 2%);
+								}
+								@include r($M-) {
+									content: url(../img/download_icon-small.png);
+								}
+								@include r(500) {
+									content: url(../img/download_icon.png);
+								}
+								@include r(360) {
+									transform: translate(0, 4%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+a.log-in {
+	font-size: 12px;
+	font-size: 1.2em;
+	-webkit-backface-visibility: hidden;
+	&:after, &:before {
+		display: none;
+	}
+	border-radius: 16.5px;
+	background: linear-gradient(90deg, $yell, $red);
+	width: 12em;
+	height: 3.4em;
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+

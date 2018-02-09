@@ -1,0 +1,63 @@
+.register-page.success {
+	#wrapper {
+		.content-block {
+			width: 450px;
+		}
+		div.success-label {
+			width: 100%;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-top: 1px solid #263d5d;
+			border-bottom: 1px solid #263d5d;
+			color: $w;
+			padding-left: 28px;
+			display: block;
+			margin-bottom: 40px;
+			font-size: 15px;
+		}
+		button[type="submit"] {
+			&.blue-btn {
+				&:after {
+					display: none;
+				}
+				-webkit-background-size: cover;
+				background-size: cover;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 0 !important;
+				width: 254px;
+				height: 49px;
+				background-color: #46699a;
+				border-radius: 24.5px;
+				padding-left: 20px;
+				background-image: none;
+				&:hover {
+					background-image: none;
+				}
+
+			}
+		}
+		.blue-btn-wrapper {
+			transform: rotateY(360deg);
+
+			&:hover {
+				opacity: 0.7;
+			}
+			@include transition;
+			width: 254px;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				background-image: url(../img/arr-left.png);
+				height: 12px;
+				z-index: 5;
+				@include absCenter;
+				width: 18px;
+				left: 62px;
+			}
+		}
+	}
+}

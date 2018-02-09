@@ -1,0 +1,499 @@
+.panel-wrap {
+	margin-bottom: 15px;
+	@include m($S) {
+		margin-bottom: 30px;
+	}
+	@include m($M) {
+		margin-bottom: 40px;
+	}
+	.panel-header {
+		background: $dash-bg-pan-h;
+		padding: 15px;
+		.icon-wrap {
+			float: left;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: #313857;
+			box-shadow: 0 0 5px 3px #1d263f;
+			position: relative;
+			svg,
+			img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 21px;
+				height: 21px;
+				fill: #5172a6;
+				rect {
+					fill: #5172a6 !important;
+				}
+				.nc-icon-wrapper {
+					fill: #5172a6 !important;
+					path {
+						fill: #5172a6 !important;
+					}
+					circle {
+						fill: #5172a6 !important;
+					}
+				}
+			}
+			img {
+				max-width: 21px;
+				max-height: 21px;
+				width: auto;
+				height: auto;
+			}
+		}
+		p.title-panel {
+			font-size: 16px;
+			line-height: 40px;
+			font-weight: 500;
+			color: $w;
+			margin: 0 0 0 50px;
+			letter-spacing: 1px;
+		}
+		@include m($S) {
+			padding: 19px 22px;
+			p.title-panel {
+				//font-size: 24px;
+				line-height: 50px;
+				margin: 0 0 0 70px;
+			}
+			.icon-wrap {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+	.panel-body {
+		background: $dash-bg-pan-b;
+		padding: 20px;
+		.info-input-ethereum-address {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				padding: 4px 0;
+				p {
+					font-size: 13px;
+					line-height: 21px;
+					font-weight: 400;
+					color: $text;
+					margin: 0;
+					padding-left: 20px;
+					position: relative;
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						top: 6px;
+						left: 0;
+						width: 6px;
+						height: 6px;
+						border: 2px solid $light-blue;
+						border-radius: 50%;
+						box-shadow: 0 0 15px $light-blue;
+						background: #313f65;
+					}
+					& > a {
+						color: $orange;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+		@include m($S) {
+			padding: 40px;
+			.info-input-ethereum-address {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				li {
+					padding: 12px 0;
+				}
+			}
+		}
+		@include m($M) {
+			.info-input-ethereum-address {
+				margin: 0 0 0 30px;
+			}
+		}
+	}
+	&.current-state {
+		.panel-body {
+			padding: 0;
+		}
+	}
+	.current-info-block {
+		padding: 15px;
+		border-bottom: 1px solid $dash-bg-pan-h;
+		.block-info-title {
+			font-size: 16px;
+			line-height: 24px;
+			font-weight: 400;
+			color: $text;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		.block-info-value {
+			display: inline-block;
+			@include ff(30,38,400);
+			color: $text;
+			position: relative;
+			padding: 0;
+			margin: 0 0 0 40px;
+			line-height: 40px;
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -40px;
+				width: 40px;
+				height: 40px;
+				background: url("../img/eth.png") right center no-repeat;
+				background-size: 100%;
+			}
+			&.dollar-icon {
+				&::before {
+					background: url("../img/dollar-icon.png") right center no-repeat;
+					background-size: 85%;
+				}
+			}
+			&.participants {
+				&::before {
+					background: url("../img/users-icon.png") right center no-repeat;
+					background-size: 100%;
+				}
+			}
+			&.current-bonus {
+				&::before {
+					background: url("../img/gem-icon.png") right center no-repeat;
+					background-size: 100%;
+				}
+			}
+		}
+		@include m($S) {
+			padding: 25px;
+			.block-info-title {
+				margin-bottom: 25px;
+			}
+			.block-info-value {
+				margin: 0 0 0 50px;
+				&::before {
+					left: -50px;
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+		@include m($M) {
+			padding: 25px;
+			.block-info-title {
+				font-size: 11px;
+				line-height: 20px;
+			}
+			.block-info-value {
+				margin: 0 0 0 80px;
+				&::before {
+					left: -80px;
+					width: 80px;
+					height: 60px;
+					background-size: auto;
+				}
+				&.dollar-icon {
+					&::before {
+						background-size: auto;
+					}
+				}
+				&.participants {
+					margin: 0 0 0 60px;
+					&::before {
+						background-size: auto;
+					}
+				}
+				&.current-bonus {
+					margin: 0 0 0 50px;
+					&::before {
+						background-size: auto;
+					}
+				}
+			}
+		}
+		@include m($L) {
+			padding: 30px;
+			.block-info-title {
+				font-size: 12px;
+			}
+		}
+		@include m($XL) {
+			padding: 40px 40px 30px;
+		}
+		&.participants-block {
+			border-left: 1px solid $dash-bg-pan-h;
+			border-right: 1px solid $dash-bg-pan-h;
+		}
+		&.invested {
+			padding: 25px 25px 5px;
+			.block-invested-value {
+				margin: 0 0 20px;
+				border: 1px solid #313857;
+				background: #141e2a;
+				padding-left: 90px;
+				position: relative;
+				min-height: 95px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				& > p {
+					font-size: 20px;
+					line-height: 28px;
+					font-weight: 400;
+					color: $text;
+				}
+				.unit-value {
+					color: #8d99a8;
+					font-size: 14px;
+					line-height: 22px;
+					font-weight: 400;
+				}
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 70px;
+					height: 70px;
+					border-right: 1px solid #313857;
+					border-bottom: 1px solid #313857;
+					background: url("../img/btc.png") center no-repeat;
+				}
+				&.eth {
+					&::before {
+						background: url("../img/eth.png") center no-repeat;
+					}
+				}
+				&.ltc {
+					&::before {
+						background: url("../img/L.png") center no-repeat;
+					}
+				}
+				&.dash {
+					&::before {
+						background: url("../img/dash.png") center no-repeat;
+					}
+				}
+			}
+			@include m($S) {
+				padding: 30px 20px 40px;
+				.block-invested-value {
+					padding-left: 60px;
+					margin: 0 20px;
+					&::before {
+						width: 40px;
+						height: 40px;
+						background-size: auto;
+					}
+				}
+			}
+			@include m($M) {
+				.block-invested-value {
+					padding-left: 55px;
+					justify-content: flex-end;
+					padding-bottom: 3px;
+					& > p {
+						font-size: 14px;
+						line-height: 20px;
+					}
+					&::before {
+						width: 50px;
+						height: 50px;
+					}
+				}
+			}
+			@include m($L) {
+				padding: 30px;
+				.block-invested-value {
+					padding-left: 90px;
+					justify-content: center;
+					padding-bottom: 0;
+					& > p {
+						font-size: 17px;
+						line-height: 25px;
+					}
+					&::before {
+						width: 70px;
+						height: 70px;
+					}
+				}
+			}
+			@include m($XL) {
+				padding: 30px 20px 40px;
+				.block-invested-value {
+					& > p {
+						font-size: 20px;
+						line-height: 28px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.social-list {
+	margin: 0 0 15px;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	border: 2px solid $dash-bg-pan-h;
+	background: $dash-bg-pan-b;
+	padding: 15px 15px 0;
+	flex-wrap: wrap;
+	li {
+		width: 25%;
+		margin-bottom: 15px;
+		text-align: center;
+		a {
+			display: inline-block;
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			background: #111726;
+			box-shadow: 0 0 5px 3px #1d263f;
+			text-align: center;
+			@include tr();
+			i {
+				font-size: 25px;
+				line-height: 44px;
+			}
+			&.facebook {
+				color: #224d85;
+				&:hover {
+					box-shadow: 0 0 15px #224d85;
+				}
+			}
+			&.twitter {
+				color: #266a91;
+				&:hover {
+					box-shadow: 0 0 15px #266a91;
+				}
+			}
+			&.btc {
+				color: #83532a;
+				&:hover {
+					box-shadow: 0 0 15px #83532a;
+				}
+			}
+			&.medium {
+				color: #1aa76a;
+				&:hover {
+					box-shadow: 0 0 15px #1aa76a;
+				}
+			}
+			&.reddit-alien {
+				color: #872d21;
+				&:hover {
+					box-shadow: 0 0 15px #872d21;
+				}
+			}
+			&.github {
+				color: #552f73;
+				&:hover {
+					box-shadow: 0 0 15px #552f73;
+				}
+			}
+			&.telegram {
+				color: #18618f;
+				&:hover {
+					box-shadow: 0 0 15px #18618f;
+				}
+			}
+			&.envelope {
+				color: #31445a;
+				&:hover {
+					box-shadow: 0 0 15px #31445a;
+				}
+			}
+		}
+	}
+	@include m($S) {
+		margin: 0 0 30px;
+		padding: 20px 15px 5px;
+		li {
+			width: auto;
+		}
+	}
+	@include m($M) {
+		margin: 0 0 40px;
+
+	}
+}
+
+.panel-body.bonuses-wrap {
+	padding: 15px;
+	.bonuses__content {
+		padding: 0;
+		margin: 0;
+		.osmi-grid-container {
+			padding: 0;
+			.data-block {
+				img {
+					min-height: 1px;
+				}
+				&.wow.fadeInRight {
+					width: 50%;
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+	@include m($S) {
+		padding: 25px;
+		.bonuses__content {
+			padding: 0;
+			margin: 0;
+			.osmi-grid-container {
+				padding: 0;
+				.data-block {
+					&.wow.fadeInRight {
+						width: 16%;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+	@include m($M) {
+		padding: 45px 30px 35px;
+		.bonuses__content {
+			.flex-wrapper {
+				.data-block {
+					div.time {
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	}
+	@include m($L) {
+		.bonuses__content {
+			.flex-wrapper {
+				.data-block {
+					div.time {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	@include m($XL) {
+		padding: 65px 80px 40px;
+	}
+}

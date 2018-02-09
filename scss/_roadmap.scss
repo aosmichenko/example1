@@ -1,0 +1,160 @@
+.roadmap {
+
+	.roadmap-slider-wrapper {
+		position: relative;
+		z-index: 3;
+		@include pl(170);
+		@include pr(170);
+		& > div {
+			position: relative;
+			div.line {
+				height: 2px;
+				width: 100%;
+				position: absolute;
+				top: 6rem;
+				@include r(1500) {
+					top: 55px;
+				}
+				background: linear-gradient(90deg, $yell, $red);
+			}
+		}
+
+		.roadmap-slider {
+			@include pl(190);
+			@include pr(50);
+			@include mt(215);
+			@include mb(265);
+			@include r(1600) {
+				@include pl(130);
+				@include pr(10);
+			}
+			@include r($S-) {
+				padding-left: 0;
+				padding-right: 0;
+
+			}
+			@include r($M-) {
+				@include mt(120);
+				@include mb(120);
+			}
+
+			.Arr {
+				position: absolute;
+				width: 51px;
+				height: 53px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				@include transition;
+				&:hover {
+					box-shadow: 0 0 5px $red;
+				}
+				justify-content: center;
+				top: 3.4rem;
+				@include r(1500) {
+					top: 29px;
+				}
+				i {
+					color: $w;
+					display: block;
+					height: 24px;
+					font-size: 24px;
+					&:before {
+						-webkit-background-size: cover;
+						background-size: cover;
+					}
+
+				}
+			}
+			.prevArr {
+				left: 0px;
+				transform: translate(-100%, 0);
+				border: 1px dashed $yell;
+			}
+			.nextArr {
+				right: 0px;
+				-webkit-background-size: cover;
+				background-size: cover;
+				transform: translate(100%, 0);
+				border: 1px dashed $red;
+			}
+			.roadmap-slider__item {
+				@include r($S-) {
+					text-align: center;
+				}
+				.roadmap-slider__item-content {
+
+					@include r($S-) {
+						margin: 0 auto;
+					}
+					@include r($S-) {
+						position: relative;
+					}
+					width: 230px;
+					width: 23rem;
+					@include mh(801){
+						@include r(1450){
+							@include m(1300){
+								width: 18rem;
+							}
+						}
+					}
+					@include r($S-) {
+						width: 85%;
+					}
+					h6 {
+						@include mb(70);
+						@include fz(18);
+						color: $w;
+						font-weight: 600;
+						letter-spacing: 0.2em;
+						@include r($L-) {
+							margin-bottom: 80px;
+						}
+						@include rh(800){
+							margin-bottom: 70px;
+						}
+						@include r($S-){
+							font-size: 12px;
+						}
+					}
+					div.circle {
+						width: 23px;
+						height: 23px;
+						position: absolute;
+						top: 5rem;
+						@include r(1500) {
+							top: 45px;
+						}
+						@include r($S-) {
+							left: 50%;
+							transform: translate(-50%, 0);
+							background-image: url(../img/circle3.png) !important;
+						}
+
+						&.circle1 {
+							background-image: url(../img/circle1.png);
+						}
+						&.circle2 {
+							background-image: url(../img/circle2.png);
+						}
+						&.circle3 {
+							background-image: url(../img/circle3.png);
+						}
+						&.circle4 {
+							background-image: url(../img/circle4.png);
+						}
+
+					}
+					.text {
+						p {
+							@include mb(15);
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

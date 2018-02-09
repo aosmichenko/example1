@@ -1,0 +1,593 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+.btn-contribute-wrap {
+	display: none;
+	margin-right: auto;
+	margin-left: 20px;
+	border-radius: 24px;
+	background: linear-gradient(63deg,$yell,$red);
+	padding: 2px;
+	a.btn-contribute,
+	button.btn-contribute {
+		display: block;
+		text-align: center;
+		background: $dash-blue-l;
+		border-radius: 22px;
+		font-size: 10px;
+		line-height: 48px;
+		font-weight: 500;
+		color: $w;
+		text-decoration: none;
+		padding: 0 38px;
+		text-transform: uppercase;
+		@include tr();
+		letter-spacing: 1px;
+		&:hover {
+			box-shadow: 0 0 35px $light-orange;
+			cursor: pointer;
+		}
+	}
+	@include m($S) {
+		display: inline-block;
+		a.btn-contribute {
+			padding: 0 25px;
+			font-size: 10px;
+		}
+	}
+	@include m($M) {
+		margin-left: 20px;
+		a.btn-contribute {
+			padding: 0 12px;
+			font-size: 11px;
+		}
+	}
+	@include m($L) {
+		margin-left: 60px;
+		a.btn-contribute {
+			padding: 0 25px;
+			font-size: 13px;
+		}
+	}
+	@include m($XL) {
+		a.btn-contribute {
+			padding: 0 38px;
+		}
+	}
+}
+
+.btn-contact-us {
+	display: inline-block;
+	background: #456795;
+	font-size: 11px;
+	line-height: 19px;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 11px 67px;
+	border-radius: 21px;
+	border: 1px solid #456795;
+	color: $w;
+	letter-spacing: 1px;
+	@include tr();
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+	&:hover {
+		box-shadow: 0 0 15px $w;
+		cursor: pointer;
+		border: 1px solid $w;
+	}
+	@include m($S) {
+		margin-bottom: 30px;
+	}
+	@include m($M) {
+		padding: 11px 45px;
+		width: auto;
+	}
+	@include m($XL) {
+		padding: 11px 67px;
+	}
+}
+
+.token-sale-terms {
+	display: block;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 21px;
+	font-weight: 400;
+	color: $orange;
+	background: $dash-blue-l;
+	text-align: center;
+	padding: 13px 15px;
+	width: 100%;
+	@include tr();
+	&:hover {
+		color: $w;
+	}
+}
+
+.btn-update {
+	display: inline-block;
+	text-align: center;
+	padding: 10px 25px;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 600;
+	color: rgba(255,255,255,.6);
+	text-transform: uppercase;
+	border: 1px solid $light-blue;
+	border-radius: 25px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	background: $dash-bg-pan-b;
+	@include tr();
+	letter-spacing: 1px;
+	&:hover {
+		&:hover {
+			box-shadow: 0 0 15px $w;
+			cursor: pointer;
+		}
+	}
+	@include m($S) {
+		padding: 12px 33px;
+		font-size: 15px;
+		line-height: 24px;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	@include m($M) {
+		padding: 12px 33px;
+		margin-top: 20px;
+	}
+	@include m($L) {
+		padding: 12px 22px;
+		margin-top: 0;
+	}
+	@include m(1320) {
+		padding: 12px 33px;
+		margin-top: 0;
+	}
+}
+
+.btn-copy {
+	position: relative;
+	padding-left: 54px;
+	letter-spacing: 1px;
+	color: $w;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 33px;
+		width: 16px;
+		height: 16px;
+		background: url("../img/copy-icon.png") center no-repeat;
+	}
+}
+
+.btn-close {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 15px;
+	width: 22px;
+	height: 22px;
+	@include tr();
+	border: none;
+	letter-spacing: 1px;
+	background: transparent;
+	svg {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: rotate(0deg);
+		@include tr();
+	}
+	&:hover {
+		cursor: pointer;
+		svg {
+			transform: rotate(90deg);
+		}
+	}
+	@include m($M) {
+		right: 25px;
+	}
+}
+
+.btn-user-nav {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.btn-contact-us-settings {
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 26px;
+}
+
+
+.ethereum-address-form {
+	p.input-title {
+		font-size: 13px;
+		line-height: 21px;
+		font-weight: 500;
+		color: #456695;
+		margin-bottom: 10px;
+	}
+	input {
+		display: inline-block;
+		width: 100%;
+		margin-right: 0;
+		padding: 10px 28px;
+		font-size: 14px;
+		line-height: 30px;
+		font-weight: 500;
+		color: $text;
+		background: #252846;
+		border-radius: 25px;
+		border: none;
+		outline: none;
+		&::-webkit-input-placeholder {
+			color: $text;
+		}
+	}
+	.btn-update.btn-contact-us {
+		width: auto;
+		margin-bottom: 30px;
+	}
+	@include m($S) {
+		p.input-title {
+			font-size: 13px;
+			line-height: 21px;
+			padding: 14px 0;
+			margin-bottom: 0;
+		}
+		input {
+			width: 70%;
+			margin-right: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	@include m($M) {
+		input {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+		.btn-update.btn-contact-us {
+			margin-bottom: 0;
+		}
+	}
+	@include m($L) {
+		p.input-title {
+			font-size: 11px;
+			line-height: 19px;
+			margin-bottom: 10px;
+		}
+		input {
+			width: 65%;
+			margin-right: 15px;
+		}
+		.btn-update.btn-contact-us {
+			margin-top: 0;
+		}
+	}
+	@include m($XL) {
+		p.input-title {
+			font-size: 13px;
+			line-height: 21px;
+		}
+		input {
+			width: 68%;
+			margin-right: 30px;
+		}
+	}
+
+	&.referral-program-wrap {
+		border-bottom: 1px solid $dash-bg-pan-h;
+		padding: 20px;
+		height: 100%;
+		p.block-title {
+			font-size: 12px;
+			line-height: 20px;
+			font-weight: 700;
+			color: #fefefe;
+			margin-bottom: 20px;
+		}
+		@include m($S) {
+			padding: 25px;
+			p.block-title {
+				font-size: 14px;
+				line-height: 22px;
+			}
+		}
+		@include m($M) {
+			padding: 30px;
+			p.block-title {
+				font-size: 15px;
+				line-height: 24px;
+			}
+		}
+		@include m($L) {
+			border-right: 1px solid $dash-bg-pan-h;
+			input {
+				width: 100%;
+				margin-right: 20px;
+			}
+			.btn-copy {
+				margin-top: 20px;
+			}
+		}
+		@include m(1300) {
+			padding: 40px 40px 30px;
+			input {
+				width: calc(100% - 180px);
+				margin-top: 0;
+			}
+			.btn-update.btn-copy {
+				padding: 12px 33px 12px 54px;
+			}
+		}
+		&.email {
+			border-right: none;
+		}
+		&.update {
+			padding-bottom: 40px;
+			p.block-title {
+				margin-bottom: 35px;
+			}
+			p.input-title {
+				font-size: 15px;
+				line-height: 23px;
+				font-weight: 500;
+				color: $text;
+				&.required {
+					position: relative;
+					padding-right: 10px;
+					display: inline-block;
+					&::after {
+						display: block;
+						content: '*';
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 6px;
+						height: 6px;
+						color: $dark-red;
+						font-size: 12px;
+						text-align: right;
+					}
+				}
+			}
+			input {
+				display: block;
+				width: 100%;
+				margin: 0 0 25px;
+				font-size: 13px;
+				line-height: 30px;
+				font-weight: 500;
+				color: #a5b1c8;
+				&::-webkit-input-placeholder {
+					color: #6d768c;
+				}
+			}
+			.btn-contact-us {
+				margin: 15px 0 0;
+				display: block;
+				box-sizing: border-box;
+				width: 100%;
+				padding: 11px 25px
+			}
+			@include m($S) {
+				p.block-title {
+					margin-bottom: 20px;
+				}
+				p.input-title {
+					&.required {
+						&::after {
+							top: 12px;
+						}
+					}
+				}
+				.btn-contact-us {
+					margin: 20px 0 0;
+					padding: 11px 67px
+				}
+			}
+			@include m($M) {
+				border-bottom: none;
+				p.block-title {
+					margin-bottom: 20px;
+				}
+				p.input-title {
+					margin-bottom: 15px;
+				}
+				.btn-contact-us {
+					margin: 40px 0 0;
+				}
+			}
+		}
+		&.buy-bne {
+			border: none;
+			padding: 0;
+			.input-title {
+				margin-bottom: 12px;
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 500;
+				color: #19346a;
+				padding: 0;
+				& > span {
+					font-weight: 700;
+				}
+			}
+			input {
+				background: #eeecf3;
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: 500;
+				color: #2974d3;
+				margin-bottom: 15px;
+				&.receive {
+					width: 100%;
+				}
+			}
+			.btn-copy.btn-update {
+				margin-top: 0;
+				background: $light-blue;
+				font-size: 12px;
+				line-height: 24px;
+				font-weight: 600;
+				margin-bottom: 35px;
+				color: $w;
+				&:hover {
+					box-shadow: 0 0 15px $light-blue;
+				}
+			}
+			.btn-contact-us {
+				width: auto;
+				background: $light-blue;
+				margin: 5px 0 0;
+				border: none;
+				font-size: 12px;
+				line-height: 26px;
+				padding: 11px 25px;
+				color: #fefefe;
+				&:hover {
+					box-shadow: 0 0 15px $light-blue;
+				}
+			}
+			@include m($S) {
+				input {
+					margin-bottom: 20px;
+					width: 60%;
+					font-size: 13px;
+					line-height: 21px;
+				}
+				.btn-copy.btn-update {
+					display: block;
+					font-size: 15px;
+				}
+				.btn-contact-us {
+					display: block;
+					padding: 11px 20px;
+					font-size: 16px;
+				}
+			}
+			@include m($M) {
+				.btn-copy.btn-update {
+					margin-top: 0;
+					margin-bottom: 15px;
+					display: inline-block;
+				}
+				.btn-contact-us {
+					display: block;
+					width: 100%;
+					padding: 11px 45px;
+				}
+				input {
+					font-size: 16px;
+					line-height: 24px;
+					width: 100%;
+					margin-bottom: 35px;
+				}
+			}
+			@include m($L) {
+				input {
+					width: 70%;
+				}
+				.btn-copy {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&.price-calculation-form {
+			border-right: none;
+			padding: 0 0 20px;
+			position: relative;
+			@include m($S) {
+				padding: 0 0 30px;
+			}
+			@include m($M) {
+				padding: 0 0 40px;
+			}
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 15px;
+				height: 20px;
+				background: url("../svg/svg-dashboard/select-83.svg") center no-repeat;
+			}
+			.input-wrap {
+				position: relative;
+				margin: 0;
+				input {
+					width: 100%;
+					margin: 0;
+					padding-right: 80px;
+					@include m($S) {
+						padding-right: 90px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.material-switch {
+	&>input[type="checkbox"] {
+		display: none;
+	}
+	&>label {
+		display: block;
+		cursor: pointer;
+		position: relative;
+		width: 90px;
+		height: 50px;
+		background-color: transparent;
+		&::before {
+			background: #141e2a;
+			border-radius: 25px;
+			content: '';
+			width: 90px;
+			height: 50px;
+			position:absolute;
+			transition: all 0.4s ease-in-out;
+		}
+		&::after {
+			background: #575f69;
+			border-radius: 50%;
+			content: 'OFF';
+			height: 38px;
+			width: 38px;
+			position: absolute;
+			top: 6px;
+			left: 46px;
+			transition: all 0.3s ease-in-out;
+			color: $text;
+			font-size: 12px;
+			line-height: 38px;
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+	&>input[type="checkbox"]:checked {
+		& + label::after {
+			content: 'ON';
+			background: #c6482b;
+			left: 6px;
+		}
+	}
+}

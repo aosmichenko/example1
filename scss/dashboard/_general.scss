@@ -1,0 +1,92 @@
+body.dashboard {
+	-webkit-font-smoothing: antialiased;
+	font-family: $mont;
+	&.no-scroll {
+		overflow: hidden;
+	}
+	.content {
+		position: relative;
+		margin: 77px 0 0;
+		min-height: calc(100vh - 77px);
+		padding: 15px 15px 0;
+	}
+	p {
+		opacity: 1;
+	}
+	button {
+		box-sizing: border-box;
+		outline: none;
+	}
+	@include m($S) {
+		.content {
+			margin: 82px 0 0;
+			min-height: calc(100vh - 82px);
+			padding: 30px 30px 0;
+		}
+	}
+	@include m($M) {
+		.content {
+			margin: 82px 0 0 225px;
+			min-height: calc(100vh - 82px);
+			padding: 60px 60px 0;
+		}
+	}
+	@include m($L) {
+		.content {
+			margin: 84px 0 0 225px;
+		}
+	}
+	@include m($XL) {
+		.content {
+			margin: 100px 0 0 275px;
+			min-height: calc(100vh - 100px);
+		}
+	}
+}
+
+@include m($M) {
+	.col-md-25 {
+		width: 25%;
+	}
+	.row-md-df {
+		display: flex;
+	}
+	.de-m-md-20 {
+		margin: 0 -20px !important;
+	}
+}
+@include m(1280) {
+	.col-1280-25 {
+		width: 25%;
+		float: left;
+	}
+}
+
+@include m($L) {
+	.col-lg-7 {
+		width: 50%;
+		float: left;
+	}
+	.col-lg-25 {
+		width: 25%;
+		float: left;
+	}
+	.row-lg-df {
+		display: flex;
+	}
+	.de-m-lg-20 {
+		margin: 0 -20px !important;
+	}
+	.al-c-lg {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@include m($XL) {
+	.col-xlg-25 {
+		width: 25%;
+		float: left;
+	}
+}
+

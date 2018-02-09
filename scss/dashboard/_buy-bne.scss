@@ -1,0 +1,248 @@
+.panel-wrap.payment-method-wrap {
+	.panel-header {
+		.title-panel {
+			font-size: 11px;
+			@include m($S) {
+				font-size: 14px;
+			}
+			@include m($M) {
+				font-size: 16px;
+			}
+		}
+	}
+	.current-info-block.invested {
+		border: none;
+		padding: 0;
+		.block-invested-value {
+			min-height: 70px;
+			margin-bottom: 20px;
+			justify-content: center;
+			padding-left: 90px;
+			padding-right: 15px;
+			@include tr();
+			&.choose-method {
+				margin-left: 20px;
+				margin-right: 20px;
+				@include m($L) {
+					margin-left: 15px;
+					margin-right: 15px;
+				}
+				@include m(1400) {
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+			}
+			&.selected {
+				border-color: $light-blue;
+				&::before {
+					border-color: $light-blue;
+				}
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 20px;
+					height: 20px;
+					transform: translate(50%,-50%);
+					border-radius: 50%;
+					background: $light-blue url("../svg/svg-dashboard/check-small.svg") center no-repeat;
+					background-size: 17px 17px;
+				}
+			}
+			&::before {
+				border-bottom: none;
+				width: 69px;
+				height: 69px;
+				@include tr();
+			}
+			&:hover {
+				cursor: pointer;
+				border-color: $light-blue;
+				&::before {
+					border-color: $light-blue;
+				}
+			}
+			@include m($S) {
+				margin-bottom: 30px;
+			}
+			@include m($L) {
+				margin-bottom: 0;
+				padding-left: 80px;
+				& > p {
+					font-size: 14px;
+					padding-right: 5px;
+				}
+			}
+			@include m(1350) {
+				padding-left: 90px;
+				& > p {
+					font-size: 15px;
+				}
+			}
+			@include m($XL) {
+				& > p {
+					font-size: 17px;
+				}
+			}
+		}
+	}
+}
+
+.panel-wrap.buy-with-btc-wrap {
+	.panel-header {
+		position: relative;
+		padding-right: 40px;
+		.title-panel {
+			font-size: 11px;
+			@include m($S) {
+				font-size: 14px;
+			}
+			@include m($M) {
+				font-size: 16px;
+			}
+		}
+	}
+	.panel-body {
+		padding: 0;
+		.section-buy-with-btc {
+			border-bottom: 1px solid $dash-bg-pan-h;
+			padding: 20px;
+			@include m($S) {
+				padding: 30px;
+			}
+			@include m($M) {
+				padding: 40px 40px 25px;
+			}
+			.input-title {
+				color: $text;
+				font-size: 14px;
+				padding: 0;
+				margin-bottom: 15px;
+			}
+			input {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			.under-input-text {
+				margin: 0;
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: 400;
+				color: $text;
+				& > span {
+					color: #f45e27;
+				}
+			}
+			p.exchange {
+				font-size: 12px;
+				line-height: 20px;
+				font-weight: 500;
+				color: $text;
+				margin: 25px 0 0;
+				& > span {
+					display: block;
+					color: #afbdcf;
+					font-size: 14px;
+					margin-top: 12px;
+					&.value {
+						color: $light-blue;
+					}
+					.value {
+						color: $light-blue;
+					}
+				}
+				@include m($S) {
+					font-size: 14px;
+					line-height: 22px;
+				}
+				@include m($M) {
+					font-size: 16px;
+					line-height: 24px;
+				}
+				@include m($L) {
+					margin: 0 0 0 70px;
+				}
+			}
+		}
+	}
+	.btn-contribute-wrap.btn-continue {
+		display: inline-block;
+		margin: 20px;
+		.btn-contribute {
+			border: none;
+			font-size: 10px;
+			line-height: 48px;
+			font-weight: 500;
+			padding-right: 60px;
+			position: relative;
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 30px;
+				width: 17px;
+				height: 12px;
+				background: url("../img/btn-arrow-right.png") center no-repeat;
+			}
+			@include m($S) {
+				font-size: 12px;
+				line-height: 48px;
+			}
+		}
+		@include m($L) {
+			margin: 30px 40px 40px;
+			.btn-contribute {
+				font-size: 13px;
+				line-height: 48px;
+			}
+		}
+	}
+}
+
+
+.panel-wrap.buy-bne-wrap {
+	max-width: 1050px;
+	margin: 0 auto;
+	.panel-header {
+		position: relative;
+		padding-right: 40px;
+		.title-panel {
+			font-size: 11px;
+			@include m($S) {
+				font-size: 14px;
+			}
+			@include m($M) {
+				font-size: 16px;
+			}
+		}
+	}
+	.panel-body {
+		padding: 25px;
+		background: $w;
+		.qr-code-wrap {
+			margin-top: 20px;
+			text-align: center;
+			img {
+				display: inline-block;
+				max-width: 100%;
+			}
+		}
+	}
+	@include m($M) {
+		.panel-body {
+			padding: 35px 40px 45px;
+		}
+		.qr-code-wrap {
+			margin: 0 0 0 15px;
+		}
+	}
+	@include m($L) {
+		.qr-code-wrap {
+			margin: 0 0 0 20px;
+		}
+	}
+}

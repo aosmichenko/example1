@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
+	<title>Benedit Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../css/dashboard.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body class="dashboard">
+<header id="header-dashboard">
+	<div class="menu-gumb-wrap">
+		<div class="menu-gumb">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<div class="logo-wrap">
+		<h1>
+			<a href="#">
+				<img src="../img/logo.png" alt="logo">
+			</a>
+		</h1>
+	</div>
+	<div class="header-panel-wrap">
+		<div class="header-panel">
+			<div class="btn-contribute-wrap">
+				<a class="btn-contribute">CONTRIBUTE NOW</a>
+			</div>
+			<div class="reward-tokens-container token-info">
+				<p>Reward Tokens<br>
+					<span class="value-reward">12445 </span><span class="unit">BNE</span>
+				</p>
+			</div>
+			<div class="token-balance-container token-info">
+				<p>Token Balance<br>
+					<span class="value-reward">12445 </span><span class="unit">BNE</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="user-profile-wrap btn-user-nav">
+		<div class="user-foto-wrap">
+
+		</div>
+		<div class="user-name">
+			<p>Mohammad Yogi Ferdiansa</p>
+			<i class="fa fa-angle-down" aria-hidden="true"></i>
+		</div>
+		<ul class="user-dropdown">
+			<li>
+				<a href="#" class="settings-nav">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="24" height="24"><g class="nc-icon-wrapper" fill="#444444"><path fill="#444444" d="M21,10h-1.3c-0.2-0.7-0.5-1.4-0.9-2.1l0.9-0.9c0.8-0.8,0.8-2,0-2.8h0c-0.8-0.8-2-0.8-2.8,0l-0.9,0.9 c-0.6-0.4-1.3-0.7-2.1-0.9V3c0-1.1-0.9-2-2-2s-2,0.9-2,2v1.3C9.3,4.5,8.6,4.7,7.9,5.1L7.1,4.2c-0.8-0.8-2-0.8-2.8,0h0 c-0.8,0.8-0.8,2,0,2.8l0.9,0.9C4.7,8.6,4.5,9.3,4.3,10H3c-1.1,0-2,0.9-2,2c0,1.1,0.9,2,2,2h1.3c0.2,0.7,0.5,1.4,0.9,2.1l-0.9,0.9 c-0.8,0.8-0.8,2,0,2.8h0c0.8,0.8,2,0.8,2.8,0l0.9-0.9c0.6,0.4,1.3,0.7,2.1,0.9V21c0,1.1,0.9,2,2,2s2-0.9,2-2v-1.3 c0.7-0.2,1.4-0.5,2.1-0.9l0.9,0.9c0.8,0.8,2,0.8,2.8,0h0c0.8-0.8,0.8-2,0-2.8l-0.9-0.9c0.4-0.6,0.7-1.3,0.9-2.1H21c1.1,0,2-0.9,2-2 C23,10.9,22.1,10,21,10z M12,15c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S13.7,15,12,15z"></path></g></svg>
+					settings
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout-nav">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="24" height="24"><g class="nc-icon-wrapper" fill="#444444"><path fill="#444444" d="M8,22c-0.205,0-0.408-0.062-0.581-0.187l-7-5C0.156,16.626,0,16.323,0,16V1c0-0.553,0.448-1,1-1 c0.388,0,1.185,0.624,1.316,0.718l6.266,4.484C8.844,5.391,9,5.693,9,6.016V21c0,0.375-0.209,0.718-0.542,0.89 C8.313,21.963,8.156,22,8,22z"></path> <path data-color="color-2" fill="#444444" d="M24,9l-6-5v4h-4V7V1c0-0.553-0.448-1-1-1H4.751l4.995,3.576C10.532,4.141,11,5.053,11,6.016 V17h2c0.552,0,1-0.447,1-1v-6h4v4L24,9z"></path></g></svg>
+					logout
+				</a>
+			</li>
+		</ul>
+	</div>
+</header>
+<div class="content">
+	<aside id="sidebar">
+		<ul class="menu">
+			<li><a href="#" class="dashboard-item">Dashboard</a></li>
+			<li class="active"><a href="#" class="buy-bne-item">Buy BNE Tokens</a></li>
+			<li><a href="#" class="price-calculation-item">Price Calculation</a></li>
+			<li><a href="#" class="transaction-history-item">Transaction History</a></li>
+		</ul>
+		<div class="bottom-links">
+			<a href="#" class="btn-contact-us">Contact Us</a>
+			<a href="#" class="token-sale-terms">Token Sale Terms</a>
+		</div>
+	</aside>
+	<div class="btn-contribute-mobile">
+		<div class="btn-contribute-wrap">
+			<a class="btn-contribute">CONTRIBUTE NOW</a>
+		</div>
+	</div>
+	<div class="token-info-mobile-wrap">
+		<div class="reward-tokens-container token-info">
+			<p>Reward Tokens<br>
+				<span class="value-reward">12445 </span><span class="unit">BNE</span></p>
+		</div>
+		<div class="token-balance-container token-info">
+			<p>Token Balance<br>
+				<span class="value-reward">12445 </span><span class="unit">BNE</span></p>
+		</div>
+	</div>
+	<div class="panel-wrap payment-method-wrap">
+		<div class="panel-header">
+			<div class="icon-wrap">
+				<img src="../img/crupto-icon.png" alt="bitcoin icon">
+			</div>
+			<p class="title-panel">CHOOSE A PAYMENT METHOD</p>
+		</div>
+		<div class="panel-body">
+			<div class="current-info-block invested">
+				<div class="row no-gutter de-m-md-20">
+					<div class="col-md-7 col-lg-25">
+						<div class="block-invested-value choose-method" data-show-block="#bitcoin">
+							<p>Bitcoin Address</p>
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-25">
+						<div class="block-invested-value eth choose-method" data-show-block="#bitcoin">
+							<p>Ethereum Address</p>
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-25">
+						<div class="block-invested-value ltc choose-method" data-show-block="#bitcoin">
+							<p>Litecoin Address</p>
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-25">
+						<div class="block-invested-value dash choose-method" data-show-block="#bitcoin">
+							<p>Dashcoin Address</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--Buy details-->
+	<div class="panel-wrap buy-with-btc-wrap buy-panel" id="bitcoin" style="display: none;">
+		<div class="panel-header">
+			<div class="icon-wrap">
+				<img src="../img/btc-title-icon.png" alt="bitcoin icon">
+			</div>
+			<p class="title-panel">BUY BNE TOKENS WITH BTC</p>
+			<button class="btn-close">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="24" height="24"><g class="nc-icon-wrapper" fill="#70abf5"><path fill="#70abf5" d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"></path></g></svg>
+			</button>
+		</div>
+		<div class="panel-body">
+			<div class="ethereum-address-form">
+				<form action="#" method="get">
+					<div class="section-buy-with-btc">
+						<div class="row no-gutter row-lg-df al-c-lg">
+							<div class="col-lg-7">
+								<p class="input-title">Amount (BTC)</p>
+								<input type="text" name="amount-BTC" value="2000">
+								<p class="under-input-text">Minimum transaction amount is <span>0.00229332 BTC</span></p>
+							</div>
+							<div class="col-lg-7">
+								<div class="exchange-wrap">
+									<p class="exchange">BTC/USD exchange rate <span class="value">1 BTC = 14542.59 USD</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-buy-with-btc">
+						<div class="row no-gutter row-lg-df al-c-lg">
+							<div class="col-lg-7">
+								<p class="input-title">Amount of BNE tokens</p>
+								<input type="text" name="amount-BNE" value="23048594">
+								<p class="under-input-text">This is an estimated amount of BNE tokens which you will receive</p>
+							</div>
+							<div class="col-lg-7">
+								<div class="exchange-wrap">
+									<p class="exchange">Bonus received<span>(0%): 0 <span class="value">BNE</span></span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-contribute-wrap btn-continue">
+						<button type="submit" class="btn-contribute" data-pay-target="#bitcoin-pay">CLICK TO CONTINUE</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!--Pay with bitcoin-->
+	<div class="panel-wrap buy-bne-wrap pay-panel" id="bitcoin-pay" style="display: none;">
+		<div class="panel-header">
+			<div class="icon-wrap">
+				<img src="../img/btc-title-icon.png" alt="bitcoin icon">
+			</div>
+			<p class="title-panel">PAY WITH BTC</p>
+			<button class="btn-close">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" width="24" height="24"><g class="nc-icon-wrapper" fill="#70abf5"><path fill="#70abf5" d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"></path></g></svg>
+			</button>
+		</div>
+		<div class="panel-body">
+			<div class="row no-gutter row-md-df">
+				<div class="col-md-10">
+					<div class="referral-program-wrap ethereum-address-form buy-bne">
+						<p class="input-title">Please send exactly <span>2 BTC</span> to</p>
+						<input type="text" readonly name="send-to" id="wallet" value="DL4p34223k4k2l34hj2l3g423po4y23hig4">
+						<button data-clipboard-target="#wallet" data-clipboard-action="copy" class="clipboard btn-copy btn-update">copy</button>
+					<form action="#" method="get" class="">
+						<p class="input-title">BNE tokens you will receive</p>
+						<input type="text" value="113736" name="value-bne-tokens-receive" class="receive">
+						<button type="submit" class="btn-contact-us">I have made the payment</button>
+					</form>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="qr-code-wrap">
+						<img src="../img/qr-code.png" alt="QR code">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<footer id="footer-dashboard">
+		<p>Have any questions? Please contact us at <a href="mailto:support@benebit.io">support@benebit.io</a></p>
+		<p class="copyright">&copy; Copyright 2017 - All Rights Reserved.</p>
+	</footer>
+</div>
+
+
+<script src="../js/clipboard.min.js"></script>
+<script src="../js/app-dashboard.js"></script>
+<script>
+	var clipboard = new Clipboard('.clipboard');
+	clipboard.on('error', function(e) {
+		console.error('Action:', e.action);
+		console.error('Trigger:', e.trigger);
+	});
+	clipboard.on('success', function(e) {
+		console.info('Action:', e.action);
+		console.info('Text:', e.text);
+		console.info('Trigger:', e.trigger);
+		jQuery(e.trigger).text('COPIED');
+		e.clearSelection();
+	});
+</script>
+
+</body>
+</html>

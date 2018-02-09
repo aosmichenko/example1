@@ -1,0 +1,463 @@
+
+.token-sale {
+	.bg-title{
+		div{
+			@include r($M-){
+				line-height: 60px;
+			}
+		}
+	}
+	.section-line{
+		top: -200px;
+		@include r(1500){
+			top: -180px;
+		}
+	}
+	position: relative;
+	.bg-shadow {
+		position: absolute;
+		top: -350px;
+		top: -35rem;
+		width: 100%;
+		height: 1800px;
+		height: 180rem;
+		@include r(1670){
+			@include m(1600){
+				height: 190rem;
+			}
+		}
+		@include r(1500){
+			height: 200rem;
+			top: -40rem;
+
+		}
+		@include r($L-){
+			height: 180rem;
+
+		}
+		@include r(1150) {
+			height: 190rem;
+		}
+		@include r(820){
+			height: 1300px;
+		}
+		@include r($S-) {
+			height: 1600px;
+			top: -300px;
+		}
+		@include r(600) {
+			height: 1600px;
+			top: -300px;
+		}
+		@include r(500) {
+			top: -250px;
+			height: 1350px;
+		}
+	}
+	.bg-title {
+		top: 0;
+		transform: translate(0, 25%);
+	}
+	.bg-planet {
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-position: center;
+		@include m(2000) {
+			left: -6rem;
+		}
+		left: -3rem;
+		height: 123rem;
+		z-index: 1;
+		@include r(1300) {
+			left: -10rem;
+		}
+		@include r($M-) {
+			left: -12rem;
+		}
+		@include r(820) {
+			display: none;
+		}
+
+	}
+	//background: url(../img/token-sale-bg.jpg);
+	h2 {
+		@include mb(165);
+		@include r(820) {
+			@include mb(100);
+		}
+	}
+	.token-sale__content {
+		position: relative;
+		h4 {
+			@include lh(35);
+			@include fz(30);
+			font-weight: 400;
+			color: $light-blue;
+			@include r(820) {
+				font-size: 16px;
+			}
+		}
+		.content-block1 {
+			position: relative;
+			z-index: 2;
+			@include mb(40);
+			@include pl(40);
+			@include r(820) {
+			}
+			h4 {
+				@include pl(10);
+				@include r(820) {
+					@include mb(30);
+					@include pr(40);
+				}
+				@include mb(55);
+			}
+			.left {
+				float: left;
+				@include r(820) {
+					width: 100%;
+					float: none;
+				}
+				ul.accepted-crypt {
+					@include r(820) {
+						@include mb(30);
+					}
+					li {
+						display: flex;
+						align-items: center;
+						@include fz(15);
+
+						@include r($M-) {
+							font-size: 12px;
+							letter-spacing: 0.1em;
+						}
+
+						@include r(366){
+							font-size: 11px;
+						}
+						color: $w;
+						&:nth-child(1) {
+							&:before {
+								margin-bottom: -4.5px;
+								content: url(../img/btn-gradient.png);
+								@include mr(30);
+							}
+						}
+						&:nth-child(2) {
+							&:before {
+								margin-bottom: -4.5px;
+								content: url(../img/eth-gradien.png);
+								@include mr(30);
+							}
+						}
+						&:nth-child(3) {
+							&:before {
+								margin-bottom: -4.5px;
+								content: url(../img/litecoin-gradient.png);
+								@include mr(30);
+							}
+						}
+						&:nth-child(4) {
+							&:before {
+								margin-bottom: -10px;
+								content: url(../img/dash-dradient.png);
+								@include mr(20);
+							}
+						}
+					}
+				}
+			}
+			.right {
+				width: 38%;
+				@include r(1600){
+					width: 43%;
+				}
+				@include r(1300) {
+					width: 50%;
+				}
+				@include r(820) {
+					width: 100%;
+					float: none;
+				}
+
+				float: right;
+
+				display: flex;
+				@include pt(35);
+				.right__left {
+					width: 50%;
+					ul {
+						li {
+							@include mb(33);
+							color: #476fa1;
+							@include fz(18);
+							@include r($M-) {
+								font-size: 12px;
+							}
+							@include r(366){
+								font-size: 11px;
+							}
+							font-weight: 300;
+						}
+					}
+				}
+				.right__right {
+					width: 50%;
+					ul {
+						li {
+							@include mb(33);
+							@include fz(18);
+							@include r($M-) {
+								font-size: 12px;
+							}
+
+							@include r($S-) {
+								font-size: 11px;
+							}
+							color: $w;
+							text-transform: uppercase;
+							span {
+								color: $grey;
+							}
+						}
+					}
+				}
+			}
+		}
+		.content-block2 {
+
+			position: relative;
+			z-index: 2;
+			@include mb(250);
+			@include pl(60);
+			@include r(1150) {
+				//		width: 75%;
+			}
+			@include r($M-) {
+				width: 45%;
+			}
+			@include r(820) {
+				width: 75%;
+				@include pl(40);
+			}
+			@include r(500) {
+				width: 90%;
+			}
+			h4 {
+				@include mb(40);
+			}
+			p {
+				opacity: 1;
+				span.code {
+					@include fz(18);
+					color: $w;
+					@include r($M-) {
+						font-size: 12px;
+					}
+				}
+				span.decimals18 {
+					@include fz(18);
+					color: $grey;
+					@include r($M-) {
+						font-size: 12px;
+					}
+				}
+				span.note {
+					display: block;
+					@include fz(14);
+					color: #95adcc;
+					@include pr(100);
+					@include r($M-) {
+						font-size: 11px;
+					}
+				}
+			}
+
+		}
+		.content-block3 {
+			.central-line-wrapper {
+				width: 3px;
+				@include absCenter;
+				height: 100%;
+				@include pb(50);
+				.central-line {
+					height: 100%;
+					background-color: #161d2b;
+					@include r($L-) {
+						display: none;
+					}
+				}
+			}
+
+			@include mb(280);
+			display: flex;
+			position: relative;
+			justify-content: space-around;
+			@include r($L-) {
+				flex-wrap: wrap;
+			}
+			@include r($M-){
+				@include mb(140);
+			}
+			.content-block3__block {
+				width: 770px;
+				width: 77rem;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				@include r($L-) {
+					width: 100%;
+					&.left {
+						@include mb(100);
+					}
+				}
+				&:last-child {
+					.data {
+						@include pl(50);
+					}
+				}
+				h3 {
+					@include lh(40);
+					text-align: center;
+					@include pl(140);
+					@include pr(140);
+				}
+				.img {
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					@include r(500) {
+						img {
+							display: block;
+							width: 42.9rem;
+							height: 42.4rem;
+						}
+					}
+				}
+				.data {
+					width: 100%;
+					display: flex;
+					justify-content: space-around;
+					@include r(600){
+						flex-wrap: wrap;
+						padding-left: 6rem !important;
+					}
+					.vertical-block {
+						display: inline-block;
+						@include r(600){
+							display: flex;
+							width: 100%;
+							justify-content: space-between;
+						}
+						.data-block {
+
+							display: flex;
+							position: relative;
+							padding-left: 23px;
+							@include mb(50);
+							@include r(600){
+								width: 50%;
+								padding-right: 10px;
+							}
+							.text {
+								.title {
+									color: $light-blue;
+									@include fz(16);
+									@include mb(10);
+									@include r(820) {
+										font-size: 12px;
+									}
+								}
+								.perc {
+									@include r(820) {
+										font-size: 16px;
+									}
+									@include r(500){
+										font-size: 14px;
+									}
+									@include fz(24);
+									color: $w;
+								}
+							}
+							&:before {
+								content: "";
+								position: absolute;
+								left: 0;
+								top: 50%;
+								transform: translate(0, -50%);
+								width: 8px;
+								height: 100%;
+								display: block;
+								border-radius: 4px;
+							}
+							&.c1 {
+								&:before {
+									background: linear-gradient(0deg, #7cc7d6, #76e1ad);
+								}
+							}
+							&.c2 {
+								&:before {
+									background: linear-gradient(180deg, #65d7f8, #3868ee);
+								}
+							}
+							&.c3 {
+								&:before {
+									background: linear-gradient(180deg, #f464b9, #be64da);
+								}
+							}
+							&.c4 {
+								&:before {
+									background: linear-gradient(180deg, #f89263, #fcc33f);
+								}
+							}
+							&.c5 {
+								&:before {
+									background: linear-gradient(180deg, #fca6e1, #f6aab7);
+
+								}
+							}
+							&.c6 {
+								&:before {
+									background: linear-gradient(180deg, #a6b94b, #c2ae3b);
+								}
+							}
+							&.c7 {
+								&:before {
+									background: linear-gradient(180deg, #3772f1, #5fcbf7);
+								}
+							}
+							&.c8 {
+								&:before {
+									background: linear-gradient(180deg, #e34579, #d9303e);
+								}
+							}
+							&.c9 {
+								&:before {
+									background: linear-gradient(180deg, #7cc7d5, #77dfb1);
+								}
+							}
+							&.c10 {
+								&:before {
+									background: linear-gradient(0deg, #f98f58, #ffbe42);
+								}
+							}
+							&.c11 {
+								&:before {
+									background: linear-gradient(0deg, #fcb4cb, #faa9d8);
+								}
+							}
+							&.c12 {
+								&:before {
+									background: linear-gradient(0deg, #e863ba, #c964d3);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

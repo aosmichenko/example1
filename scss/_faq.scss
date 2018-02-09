@@ -1,0 +1,116 @@
+.faq {
+	.bg-title {
+		z-index: 1;
+	}
+	.accordion {
+		position: relative;
+		z-index: 2;
+		@include mt(165);
+		@include mb(170);
+		@include r($M-) {
+			@include mt(100);
+			@include mb(100);
+		}
+		ul {
+			li {
+				border-bottom: 1px solid #1b2d47;
+				.title-wrapper {
+					display: block;
+					position: relative;
+					@include pr(60);
+					border-left: 0;
+					border-right: 0;
+					@include pl(15);
+					@include pb(15);
+					cursor: pointer;
+					@include pt(15);
+					@include r($S-) {
+						@include pt(20);
+						@include pb(20);
+					}
+					@include r($M-){
+						padding-right: 50px;
+						padding-top: 15px;
+						padding-bottom: 15px;
+					}
+					&:after {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						content: "";
+						background-image: url(../img/plus.png);
+						width: 20px;
+						height: 20px;
+						@include absCenter;
+						left: auto;
+						right: 10px;
+					}
+					&:before {
+						border-bottom: 1px solid #1b2d47;
+					}
+					.title {
+						cursor: pointer;
+						font-weight: 600;
+						color: #f3f6f9;
+						@include fz(18);
+						@include r($M-){
+							font-size: 14px;
+						}
+						@include r($S-){
+							font-size: 12px;
+						}
+					}
+				}
+
+				&:first-child {
+					border-top: 1px solid #1b2d47;
+
+					&.on {
+						.title-wrapper {
+							&:before {
+								top: 0px;
+							}
+						}
+					}
+				}
+				&.on {
+					.title-wrapper {
+						//
+						border-bottom: 1px solid $dark-red;
+						border-top: 0;
+						&:after {
+							background-image: url(../img/minus.png);
+							height: 38px;
+							width: 50px;
+							right: -20px;
+						}
+						&:before {
+							outline:none;
+							z-index: 4;
+							background-image: linear-gradient(270deg, $dark-red, $dark-red 20%, $yell);
+							width: 100%;
+							content: "";
+							display: block;
+							height: 1px;
+							max-height: 1px;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+						.title {
+
+						}
+					}
+				}
+
+				p {
+					@include pr(20);
+					display: block;
+					@include pt(35);
+					@include pb(35);
+					@include pl(15);
+				}
+			}
+		}
+	}
+}
